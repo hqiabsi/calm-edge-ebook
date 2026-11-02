@@ -41,6 +41,30 @@ nahi hai. Phone se aise karo:
 
 ---
 
+## 0a. Home page ab Apple-style hai
+
+| Page | Kya hai | URL |
+|---|---|---|
+| `index.html` | **Naya home page** — Apple jaisa clean design: hero, highlights, chapters, carousel, collections, buy section | https://hqiabsi.github.io/calm-edge-ebook/ |
+| `store.html` | Shop — cart, filters, search, preview | https://hqiabsi.github.io/calm-edge-ebook/store.html |
+| `classic.html` | Purana 3D wala landing page (delete nahi kiya, safe rakha hai) | https://hqiabsi.github.io/calm-edge-ebook/classic.html |
+
+**Naya home page ek hi file hai — koi external CSS, koi CDN, koi font link nahi.** Isliye ye kabhi
+tootega nahi, offline bhi chalega. Font system ka hai: iPhone/iPad par asli SF Pro dikhta hai
+(bilkul Apple jaisa), Windows/Android par Segoe UI / Roboto.
+
+### Edit kaise kare
+
+- **Colours / radius / font:** file ke sabse upar `:root` block (jaise `--blue`, `--ink`, `--grey`).
+- **Text:** file mein bade comment markers hain — `<!-- ================= HERO ================= -->`,
+  `<!-- ================= HIGHLIGHTS ================= -->` wagairah. Ctrl+F se seedha wahan jao.
+- **Book covers:** sab CSS se bante hain, koi image nahi. Har book par teen values:
+  `--bw` (width), `--c1`/`--c2` (gradient), `--acc` (accent colour). Bas wahi badlo.
+- **Carousel ki books:** `<!-- ================= LATEST / STORE RAIL ================= -->` section.
+- **Price:** `#buy` section mein `₹399` / `₹699` (do jagah hain — hero link aur buy band).
+
+---
+
 ## 0b. Aapki site par ab DO pages hain
 
 | Page | Kya hai | URL |
