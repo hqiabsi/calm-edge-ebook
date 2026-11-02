@@ -1,0 +1,6 @@
+# robots.txt — Google ko batata hai ki kya crawl karna hai
+User-agent: *
+Allow: /
+
+# Submit karne se pehle apna asli URL daalo, phir shuru wala "#" hata do:
+Sitemap: https://hqiabsi.github.io/calm-edge-ebook/sitemap.xml
