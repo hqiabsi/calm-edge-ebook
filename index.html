@@ -3,617 +3,378 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Calm Edge — A practical guide to deep work in a noisy world</title>
-<meta name="description" content="The Calm Edge is a 214-page practical guide to focus, deep work and attention management. Read a free sample chapter and get the ebook instantly.">
-<meta name="theme-color" content="#0a1017">
-
-<!-- ============================================================
-     GOOGLE SEARCH CONSOLE VERIFICATION
-     search.google.com/search-console → property add karo → "HTML tag"
-     method chuno → jo tag Google de, usse is comment ki jagah paste karo.
-     Aisa dikhega:  <meta name="google-site-verification" content="AbCdEf123..." />
-     ============================================================ -->
-
-<!-- GOOGLE ANALYTICS 4 — Measurement ID milne par neeche wale comment ko kholo
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
--->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230a1017'/%3E%3Cpath d='M6.5 6.2A1.6 1.6 0 0 1 8.1 4.6H18v11.2H8.1a1.6 1.6 0 0 0-1.6 1.6z' fill='none' stroke='%23d9a441' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
-<meta property="og:title" content="The Calm Edge — ebook">
-<meta property="og:description" content="A practical guide to deep work in a noisy world. 214 pages, 12 chapters, instant download.">
+<title>Kitably — The Calm Edge. Do your best work in a noisy world.</title>
+<meta name="description" content="The Calm Edge is a 214-page field guide to deep work. Read it on any device, own it for life. Instant PDF + EPUB download.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="The Calm Edge — Kitably">
+<meta property="og:description" content="Do your best work in a noisy world. 214 pages, 12 chapters, instant PDF + EPUB.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hqiabsi.github.io/calm-edge-ebook/">
 <link rel="canonical" href="https://hqiabsi.github.io/calm-edge-ebook/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231d1d1f'/%3E%3Cpath d='M6.5 6.2A1.6 1.6 0 0 1 8.1 4.6H18v11.2H8.1a1.6 1.6 0 0 0-1.6 1.6z' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 /* ============================================================
-   1. THEME TOKENS  —  edit colours here, everything follows
+   1. TOKENS
    ============================================================ */
 :root{
-  --bg:            #0a1017;
-  --bg-2:          #0d151e;
-  --surface:       #111b26;
-  --surface-2:     #16222f;
-  --border:        rgba(255,255,255,.09);
-  --border-strong: rgba(255,255,255,.16);
-  --text:          #eef3f8;
-  --text-dim:      #94a5b6;
-  --text-mute:     #6c7f91;
-  --gold:          #d9a441;
-  --gold-soft:     #f0cd85;
-  --gold-dim:      rgba(217,164,65,.14);
-  --sage:          #6fae9b;
-  --cream:         #f4ecdd;
-  --shadow-lg:     0 40px 80px -30px rgba(0,0,0,.85);
-  --shadow-md:     0 18px 40px -22px rgba(0,0,0,.8);
-  --radius:        18px;
-  --radius-sm:     12px;
-  --font-display:  "Instrument Serif", Georgia, "Times New Roman", serif;
-  --font-body:     "Plus Jakarta Sans", "Segoe UI", sans-serif;
-  --font-mono:     "JetBrains Mono", ui-monospace, monospace;
-  --max:           1180px;
+  --black:#000;
+  --ink:#1d1d1f;
+  --ink-2:#6e6e73;
+  --ink-3:#86868b;
+  --line:#d2d2d7;
+  --line-dark:rgba(255,255,255,.14);
+  --grey:#f5f5f7;
+  --grey-2:#fbfbfd;
+  --blue:#0071e3;
+  --blue-hover:#0077ed;
+  --link:#0066cc;
+  --white:#fff;
+  --r-sm:12px;
+  --r-md:18px;
+  --r-lg:28px;
+  --nav-h:48px;
+  --pad:clamp(20px,5vw,40px);
+  --max:1024px;
+  --max-wide:1440px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
-html[data-theme="light"]{
-  --bg:            #f7f3ea;
-  --bg-2:          #f1ebdf;
-  --surface:       #fffdf8;
-  --surface-2:     #f8f2e7;
-  --border:        rgba(22,32,43,.11);
-  --border-strong: rgba(22,32,43,.2);
-  --text:          #17212b;
-  --text-dim:      #5b6b7a;
-  --text-mute:     #7d8b98;
-  --gold:          #a4711f;
-  --gold-soft:     #8a5c14;
-  --gold-dim:      rgba(164,113,31,.12);
-  --sage:          #3d7f6d;
-  --cream:         #fffdf8;
-  --shadow-lg:     0 40px 70px -34px rgba(23,33,43,.35);
-  --shadow-md:     0 18px 36px -24px rgba(23,33,43,.3);
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--font-body);
-  font-size:16.5px;
-  line-height:1.65;
+  font-family:var(--font);
+  background:var(--white);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.47059;
+  font-weight:400;
+  letter-spacing:-.022em;
   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
   overflow-x:hidden;
-  transition:background .4s ease,color .4s ease;
 }
-img{max-width:100%;display:block}
+img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
-::selection{background:var(--gold);color:#0a1017}
-
-/* page atmosphere */
-body::before{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(900px 520px at 78% -8%, var(--gold-dim), transparent 62%),
-    radial-gradient(760px 460px at 4% 12%, rgba(111,174,155,.10), transparent 65%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 55%, var(--bg) 100%);
-}
-body::after{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
-  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
-  background-size:88px 88px;
-  mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
-  -webkit-mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
-}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:#b3d7ff;color:#000}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.wrap--wide{max-width:var(--max-wide)}
 
 /* ============================================================
-   2. LAYOUT HELPERS
+   2. TYPE
    ============================================================ */
-.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:2}
-section{position:relative;z-index:2}
-.section-pad{padding:104px 0}
-.eyebrow{
-  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);display:flex;align-items:center;gap:10px;margin:0 0 18px
-}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
-h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-.015em;line-height:1.06;margin:0}
-h1{font-size:clamp(2.9rem,6.4vw,5.1rem)}
-h2{font-size:clamp(2rem,3.9vw,3.15rem);line-height:1.1}
-h3{font-size:1.32rem;line-height:1.25;font-family:var(--font-body);font-weight:600;letter-spacing:-.01em}
-em.serif{font-style:italic;color:var(--gold-soft)}
-p{margin:0 0 1em;color:var(--text-dim)}
-p.lead{font-size:1.09rem;max-width:58ch;color:var(--text-dim)}
-.section-head{max-width:660px;margin-bottom:54px}
-.section-head h2+p{margin-top:18px}
-.rule{height:1px;background:var(--border);border:0;margin:0}
+.h1{font-size:clamp(44px,7.4vw,88px);line-height:1.04;font-weight:600;letter-spacing:-.028em}
+.h2{font-size:clamp(30px,4.2vw,52px);line-height:1.08;font-weight:600;letter-spacing:-.024em}
+.h3{font-size:clamp(24px,2.8vw,34px);line-height:1.14;font-weight:600;letter-spacing:-.02em}
+.h4{font-size:clamp(19px,2vw,24px);line-height:1.2;font-weight:600;letter-spacing:-.018em}
+.sub{font-size:clamp(19px,2.2vw,28px);line-height:1.28;font-weight:400;letter-spacing:-.018em;color:var(--ink-2)}
+.body-lg{font-size:clamp(17px,1.6vw,21px);line-height:1.4;letter-spacing:-.014em;color:var(--ink-2)}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:-.01em;color:#bf4800}
+.eyebrow--gold{color:#b8860b}
+.on-dark{color:var(--white)}
+.on-dark .sub,.on-dark .body-lg{color:#a1a1a6}
+.center{text-align:center}
+.muted{color:var(--ink-2)}
 
-/* buttons */
+/* links & buttons */
+.link{color:var(--link);font-size:clamp(17px,1.5vw,21px);display:inline-flex;align-items:center;gap:4px;transition:opacity .2s}
+.link:hover{text-decoration:underline}
+.link svg{width:11px;height:11px;margin-top:1px}
+.links{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.links--center{justify-content:center}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:15px 26px;border-radius:999px;font-weight:600;font-size:.94rem;letter-spacing:.01em;
-  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s,border-color .25s;
-  white-space:nowrap
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--blue);color:#fff;border-radius:980px;
+  padding:12px 24px;font-size:17px;font-weight:400;letter-spacing:-.014em;
+  transition:background .2s,transform .2s;
 }
-.btn:active{transform:translateY(1px) scale(.995)}
-.btn--gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#14100a;box-shadow:0 14px 34px -16px rgba(217,164,65,.75)}
-.btn--gold:hover{transform:translateY(-2px);box-shadow:0 22px 44px -18px rgba(217,164,65,.85)}
-.btn--ghost{border:1px solid var(--border-strong);color:var(--text);background:rgba(255,255,255,.02)}
-.btn--ghost:hover{border-color:var(--gold);color:var(--gold-soft);transform:translateY(-2px)}
-.btn--sm{padding:11px 18px;font-size:.85rem}
-.btn svg{width:16px;height:16px;flex:none}
+.btn:hover{background:var(--blue-hover)}
+.btn:active{transform:scale(.98)}
+.btn--ghost{background:transparent;color:var(--link);border:1px solid var(--blue)}
+.btn--ghost:hover{background:rgba(0,113,227,.06)}
+.btn--light{background:#fff;color:#000}
+.btn--light:hover{background:#f2f2f2}
+.btn--sm{padding:9px 18px;font-size:15px}
 
 /* ============================================================
-   3. TOP BAR / NAV
+   3. GLOBAL NAV
    ============================================================ */
-.progress-bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--sage));z-index:120}
 .nav{
-  position:fixed;top:0;left:0;right:0;z-index:110;
-  transition:background .35s,border-color .35s,backdrop-filter .35s,padding .35s;
-  border-bottom:1px solid transparent;padding:18px 0;
+  position:sticky;top:0;z-index:100;height:var(--nav-h);
+  background:rgba(251,251,253,.82);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.08);
+  transition:background .3s;
 }
-.nav.scrolled{
-  background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:blur(16px) saturate(150%);
-  -webkit-backdrop-filter:blur(16px) saturate(150%);
-  border-bottom-color:var(--border);padding:11px 0;
+.nav__inner{
+  max-width:var(--max-wide);margin:0 auto;padding:0 var(--pad);
+  height:100%;display:flex;align-items:center;gap:26px;
 }
-.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.01em;font-size:1rem}
-.brand__mark{
-  width:32px;height:32px;border-radius:9px;flex:none;
-  background:linear-gradient(150deg,var(--gold-soft),var(--gold) 55%,#8c6218);
-  display:grid;place-items:center;box-shadow:0 8px 20px -10px rgba(217,164,65,.8)
-}
-.brand__mark svg{width:17px;height:17px}
-.brand small{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:var(--text-mute);font-weight:400;text-transform:uppercase}
-.nav__links{display:flex;align-items:center;gap:30px}
-.nav__links a{font-size:.89rem;color:var(--text-dim);font-weight:500;position:relative;transition:color .2s}
-.nav__links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold);transition:width .3s}
-.nav__links a:hover{color:var(--text)}
-.nav__links a:hover::after{width:100%}
-.nav__right{display:flex;align-items:center;gap:12px}
-.icon-btn{
-  width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:grid;place-items:center;
-  color:var(--text-dim);transition:.25s;flex:none
-}
-.icon-btn:hover{color:var(--gold);border-color:var(--gold);transform:rotate(12deg)}
-.icon-btn svg{width:16px;height:16px}
+.nav__logo{display:flex;align-items:center;gap:7px;font-size:15px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.nav__logo svg{width:17px;height:17px}
+.nav__links{display:flex;align-items:center;gap:26px;margin-left:auto}
+.nav__links a{font-size:12px;line-height:1;color:rgba(0,0,0,.8);letter-spacing:-.01em;transition:color .2s}
+.nav__links a:hover{color:#000}
+.nav__tools{display:flex;align-items:center;gap:22px;margin-left:auto}
+.nav__tools a,.nav__tools button{display:grid;place-items:center;color:rgba(0,0,0,.8);transition:color .2s}
+.nav__tools a:hover,.nav__tools button:hover{color:#000}
+.nav__tools svg{width:15px;height:15px}
 .nav__burger{display:none}
+.nav__bag{position:relative}
+.nav__bag span{
+  position:absolute;top:-5px;right:-7px;min-width:15px;height:15px;border-radius:99px;
+  background:var(--blue);color:#fff;font-size:9px;font-weight:600;line-height:15px;text-align:center;padding:0 3px;
+}
+
+/* mobile menu */
+.menu{
+  position:fixed;inset:var(--nav-h) 0 0;z-index:99;background:rgba(251,251,253,.98);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  padding:24px var(--pad) 40px;display:none;flex-direction:column;gap:0;overflow-y:auto;
+}
+.menu.open{display:flex}
+.menu a{
+  font-size:24px;font-weight:600;letter-spacing:-.02em;color:var(--ink);
+  padding:16px 0;border-bottom:1px solid var(--line);
+}
+.menu a:last-of-type{border-bottom:0}
 
 /* ============================================================
-   4. HERO
+   4. LOCAL NAV (product sub-nav)
    ============================================================ */
-.hero{padding:150px 0 60px;overflow:hidden}
-.hero__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center;min-height:min(76vh,700px)}
-.hero__copy{max-width:560px}
-.hero h1{margin-bottom:24px}
-.hero h1 span{display:block}
-.hero__sub{font-size:1.1rem;color:var(--text-dim);max-width:46ch;margin-bottom:34px}
-.hero__cta{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:38px}
-.hero__meta{display:flex;flex-wrap:wrap;gap:26px;padding-top:26px;border-top:1px solid var(--border)}
-.hero__meta div{min-width:0}
-.hero__meta dt{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);margin-bottom:3px}
-.hero__meta dd{margin:0;font-size:.95rem;font-weight:600;color:var(--text)}
-.stars{display:inline-flex;gap:2px;vertical-align:-2px}
-.stars svg{width:13px;height:13px;fill:var(--gold)}
-
-/* 3D stage */
-.stage{position:relative;height:min(60vh,500px);min-height:360px;display:grid;place-items:center}
-.stage__glow{
-  position:absolute;width:74%;aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(217,164,65,.22),transparent 66%);
-  filter:blur(28px);pointer-events:none
+.local-nav{
+  position:sticky;top:var(--nav-h);z-index:90;height:52px;
+  background:rgba(251,251,253,.9);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.08);
 }
-#book3d{width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
-#book3d.dragging{cursor:grabbing}
-.stage__hint{
-  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);
-  display:flex;align-items:center;gap:8px;white-space:nowrap
+.local-nav__inner{
+  max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;
+  display:flex;align-items:center;gap:24px;
 }
-.stage__hint svg{width:13px;height:13px;opacity:.8}
-/* CSS fallback book (shown if WebGL/CDN unavailable) */
-.book-fallback{display:none;perspective:1100px;width:230px;height:320px}
-.book-fallback.show{display:block}
-.book-fallback__inner{
-  position:relative;width:100%;height:100%;transform-style:preserve-3d;
-  animation:spinBook 16s linear infinite;transform:rotateY(-22deg) rotateX(6deg)
+.local-nav__title{font-size:21px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.local-nav__links{display:flex;align-items:center;gap:24px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.local-nav__links::-webkit-scrollbar{display:none}
+.local-nav__links a{font-size:12px;color:var(--ink-2);white-space:nowrap;transition:color .2s}
+.local-nav__links a:hover,.local-nav__links a.is-active{color:var(--ink)}
+.local-nav__buy{
+  background:var(--blue);color:#fff;border-radius:980px;padding:6px 14px;font-size:12px;
+  white-space:nowrap;transition:background .2s;
 }
-@keyframes spinBook{to{transform:rotateY(338deg) rotateX(6deg)}}
-.book-fallback__face{
-  position:absolute;inset:0;border-radius:4px 8px 8px 4px;
-  background:linear-gradient(160deg,#16222f,#0c141d);border:1px solid var(--border-strong);
-  box-shadow:inset 0 0 60px rgba(0,0,0,.6),0 30px 60px -30px #000;
-  display:grid;place-content:center;gap:8px;text-align:center;padding:24px;
-  font-family:var(--font-display);color:var(--gold-soft);font-size:1.5rem
-}
-.book-fallback__face small{font-family:var(--font-mono);font-size:9px;letter-spacing:.2em;color:var(--text-mute)}
-
-/* trust strip */
-.trust{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:color-mix(in srgb,var(--surface) 45%,transparent)}
-.trust__inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:22px 0}
-.trust__item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-dim);font-weight:500}
-.trust__item svg{width:15px;height:15px;color:var(--sage);flex:none}
+.local-nav__buy:hover{background:var(--blue-hover)}
 
 /* ============================================================
-   5. INSIDE THE BOOK (chapters)
+   5. SECTIONS
    ============================================================ */
-.chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:16px}
-.chapter{
-  background:color-mix(in srgb,var(--surface) 78%,transparent);
-  border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px;
-  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,background .3s;
-  position:relative;overflow:hidden;min-width:0
-}
-.chapter::after{
-  content:"";position:absolute;left:0;top:0;height:100%;width:2px;background:var(--gold);
-  transform:scaleY(0);transform-origin:top;transition:transform .35s
-}
-.chapter:hover{transform:translateY(-4px);border-color:var(--border-strong);background:var(--surface)}
-.chapter:hover::after{transform:scaleY(1)}
-.chapter__num{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:12px;display:block}
-.chapter h3{margin-bottom:8px}
-.chapter p{font-size:.89rem;margin:0;color:var(--text-mute);line-height:1.6}
-.chapter--wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:linear-gradient(100deg,var(--gold-dim),transparent 70%);border-color:var(--border-strong)}
-.chapter--wide .chapter__num{margin:0}
+section{position:relative}
+.pad{padding:clamp(60px,9vw,110px) 0}
+.pad-sm{padding:clamp(40px,6vw,72px) 0}
+.dark{background:#000;color:#f5f5f7}
+.grey{background:var(--grey)}
+.grey-2{background:var(--grey-2)}
 
 /* ============================================================
-   6. SPLIT — what you get
+   6. HERO
    ============================================================ */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.checklist{list-style:none;padding:0;margin:0;display:grid;gap:16px}
-.checklist li{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start}
-.checklist .tick{
-  width:22px;height:22px;border-radius:50%;background:var(--gold-dim);border:1px solid rgba(217,164,65,.4);
-  display:grid;place-items:center;margin-top:3px;flex:none
+.hero{
+  background:#000;color:#f5f5f7;overflow:hidden;
+  padding:clamp(48px,7vw,84px) 0 0;
 }
-.checklist .tick svg{width:11px;height:11px;color:var(--gold)}
-.checklist strong{display:block;font-size:.97rem;color:var(--text);font-weight:600;margin-bottom:2px}
-.checklist span{font-size:.88rem;color:var(--text-mute);line-height:1.55}
-.spec-card{
-  background:color-mix(in srgb,var(--surface) 85%,transparent);border:1px solid var(--border);
-  border-radius:var(--radius);padding:10px 0;box-shadow:var(--shadow-md)
+.hero__glow{
+  position:absolute;left:50%;top:34%;width:min(1100px,150vw);height:min(1100px,150vw);
+  transform:translate(-50%,-50%);pointer-events:none;
+  background:radial-gradient(circle,rgba(201,138,43,.22) 0%,rgba(201,138,43,.08) 34%,transparent 62%);
 }
-.spec-card__head{display:flex;align-items:center;justify-content:space-between;padding:14px 24px 16px;border-bottom:1px solid var(--border)}
-.spec-card__head span{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-mute)}
-.spec-row{display:flex;justify-content:space-between;gap:16px;padding:13px 24px;font-size:.9rem;border-bottom:1px solid var(--border)}
-.spec-row:last-child{border-bottom:0}
-.spec-row b{color:var(--text);font-weight:600}
-.spec-row span{color:var(--text-mute);font-family:var(--font-mono);font-size:.82rem;text-align:right}
+.hero__inner{position:relative;text-align:center}
+.hero__eyebrow{font-size:15px;font-weight:600;letter-spacing:-.01em;color:#d9a441;margin-bottom:14px}
+.hero h1{color:#f5f5f7}
+.hero__sub{margin:18px auto 0;max-width:640px;color:#a1a1a6;font-size:clamp(19px,2.2vw,26px);line-height:1.3;letter-spacing:-.018em}
+.hero .links{margin-top:26px}
+.hero .link{color:#2997ff}
+.hero__visual{
+  position:relative;margin-top:clamp(34px,5vw,56px);
+  display:flex;justify-content:center;align-items:flex-end;
+  padding-bottom:clamp(30px,5vw,56px);
+}
+.hero__floor{
+  position:absolute;bottom:clamp(14px,3vw,34px);left:50%;transform:translateX(-50%);
+  width:min(560px,74vw);height:60px;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(217,164,65,.30),transparent 70%);
+  filter:blur(14px);
+}
+
+/* ---- CSS 3D book ---- */
+.book{
+  position:relative;
+  width:var(--bw,240px);height:calc(var(--bw,240px) * 1.4);
+  transform-style:preserve-3d;
+  transform:perspective(1600px) rotateY(-17deg) rotateX(3deg);
+  animation:float 9s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:perspective(1600px) rotateY(-17deg) rotateX(3deg) translateY(0)}
+50%{transform:perspective(1600px) rotateY(-13deg) rotateX(2deg) translateY(-10px)}}
+.book__cover{
+  position:absolute;inset:0;border-radius:3px 12px 12px 3px;overflow:hidden;
+  background-image:linear-gradient(150deg,var(--c1),var(--c2));
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 40px 70px -30px rgba(0,0,0,.85), inset 0 0 0 1px rgba(255,255,255,.06);
+  display:flex;flex-direction:column;padding:calc(var(--bw,240px) * .09);
+}
+.book__pages{
+  position:absolute;top:1.5%;right:-7px;bottom:1.5%;width:10px;border-radius:0 3px 3px 0;
+  background:linear-gradient(90deg,#e7dcc6,#fffdf7 40%,#cdbfa2);
+  box-shadow:0 20px 40px -24px rgba(0,0,0,.7);
+}
+.book__kicker{font-size:max(7px,calc(var(--bw,240px) * .036));letter-spacing:.22em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.book__title{
+  margin-top:auto;font-size:calc(var(--bw,240px) * .12);line-height:1.1;text-wrap:balance;font-weight:600;
+  letter-spacing:-.02em;color:#faf6ee;
+}
+.book__author{margin-top:calc(var(--bw,240px) * .04);font-size:max(6px,calc(var(--bw,240px) * .033));letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.book__cover::after{
+  content:"";position:absolute;left:50%;top:46%;width:46%;aspect-ratio:1;transform:translate(-50%,-50%);
+  border-radius:50%;pointer-events:none;opacity:.22;
+  background:radial-gradient(circle,transparent 52%,var(--acc) 53%,transparent 54.5%,transparent 66%,var(--acc) 67%,transparent 68.5%);
+}
+.book__kicker,.book__title,.book__author,.book__rule{position:relative;z-index:1}
+.book__rule{display:none}
 
 /* ============================================================
-   7. AUTHOR
+   7. PRODUCT SECTIONS
    ============================================================ */
-.author{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:center}
-.author__card{
-  border-radius:var(--radius);border:1px solid var(--border);padding:30px;text-align:center;
-  background:linear-gradient(170deg,var(--surface-2),var(--surface));box-shadow:var(--shadow-md)
+.showcase{text-align:center}
+.showcase .h2{margin-bottom:10px}
+.showcase .body-lg{max-width:640px;margin:14px auto 0}
+.showcase .links{margin-top:22px}
+.showcase--left{text-align:left}
+.showcase--left .body-lg{margin-left:0;margin-right:0}
+.showcase__art{margin-top:clamp(34px,5vw,60px);display:flex;justify-content:center;gap:clamp(14px,3vw,34px);align-items:flex-end;flex-wrap:wrap}
+
+/* feature grid */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px);margin-top:clamp(34px,5vw,56px)}
+.feature{text-align:left}
+.feature__num{font-size:clamp(34px,4vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.dark .feature__num{color:#f5f5f7}
+.feature__label{margin-top:8px;font-size:14px;font-weight:600;letter-spacing:-.01em;color:#bf4800}
+.dark .feature__label{color:#d9a441}
+.feature p{margin-top:6px;font-size:15px;line-height:1.45;color:var(--ink-2)}
+.dark .feature p{color:#a1a1a6}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tile{
+  position:relative;overflow:hidden;border-radius:var(--r-lg);
+  min-height:clamp(360px,42vw,520px);padding:clamp(26px,4vw,44px);
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  background:var(--grey);transition:transform .35s cubic-bezier(.2,.8,.2,1);
 }
-.author__avatar{
-  width:118px;height:118px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;
-  font-family:var(--font-display);font-size:2.6rem;color:#14100a;
-  background:linear-gradient(150deg,var(--gold-soft),var(--gold) 60%,#8c6218);
-  box-shadow:0 18px 40px -18px rgba(217,164,65,.7)
+.tile:hover{transform:translateY(-2px)}
+.tile--dark{background:#1d1d1f;color:#f5f5f7}
+.tile--warm{background:linear-gradient(170deg,#fdf3e3,#f6e3c4)}
+.tile--cool{background:linear-gradient(170deg,#eef4f8,#dbe7ef)}
+.tile .eyebrow{margin-bottom:8px}
+.tile .h3{margin-bottom:8px}
+.tile .body-lg{font-size:clamp(15px,1.5vw,19px);max-width:420px}
+.tile--dark .body-lg{color:#a1a1a6}
+.tile .links{margin-top:16px}
+.tile__art{margin-top:auto;padding-top:26px;display:flex;justify-content:center;align-items:flex-end;gap:12px}
+
+/* carousel */
+.rail-wrap{position:relative}
+.rail{
+  display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px var(--pad) 22px;margin:0 calc(var(--pad) * -1);
+  scrollbar-width:none;
 }
-.author__card h3{font-family:var(--font-display);font-size:1.6rem;font-weight:400;margin-bottom:4px}
-.author__card .role{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.author__socials{display:flex;justify-content:center;gap:10px;margin-top:6px}
-.quote{
-  font-family:var(--font-display);font-size:clamp(1.4rem,2.4vw,1.95rem);line-height:1.4;color:var(--text);
-  margin:0 0 24px;padding-left:26px;border-left:2px solid var(--gold)
+.rail::-webkit-scrollbar{display:none}
+.card{
+  flex:0 0 clamp(230px,26vw,290px);scroll-snap-align:center;
+  background:var(--white);border-radius:var(--r-md);
+  padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;
 }
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(0,0,0,.3)}
+.card .book{margin-bottom:18px}
+.card__tag{font-size:12px;font-weight:600;letter-spacing:-.01em;color:#bf4800;margin-bottom:6px}
+.card h3{font-size:17px;font-weight:600;letter-spacing:-.018em;line-height:1.3}
+.card p{font-size:14px;color:var(--ink-2);margin-top:4px}
+.card__price{margin-top:12px;font-size:15px;font-weight:600}
+.card__price s{color:var(--ink-3);font-weight:400;margin-left:6px;font-size:13px}
+.card .btn{margin-top:14px;width:100%}
+
+/* quote */
+.quote{max-width:880px;margin:0 auto;text-align:center}
+.quote blockquote{
+  font-size:clamp(24px,3.4vw,40px);line-height:1.22;font-weight:600;letter-spacing:-.022em;
+}
+.quote figcaption{margin-top:22px;font-size:15px;color:var(--ink-2)}
+.dark .quote figcaption{color:#a1a1a6}
+
+/* buy band */
+.buy-band{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.buy-band__price{display:flex;align-items:baseline;gap:12px;margin:18px 0 6px}
+.buy-band__price b{font-size:clamp(34px,4vw,48px);font-weight:600;letter-spacing:-.03em}
+.buy-band__price s{font-size:20px;color:var(--ink-3)}
+.buy-band__price span{font-size:15px;color:#bf4800;font-weight:600}
+.buy-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px}
+.buy-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink-2)}
+.buy-list svg{width:17px;height:17px;flex:none;margin-top:3px;color:#1d9a4b}
+.buy-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.buy-note{margin-top:14px;font-size:13px;color:var(--ink-3)}
 
 /* ============================================================
-   8. REVIEWS
+   8. FOOTER
    ============================================================ */
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.review{
-  background:color-mix(in srgb,var(--surface) 70%,transparent);border:1px solid var(--border);
-  border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:14px;min-width:0;
-  transition:transform .3s,border-color .3s
+.footer{background:var(--grey);color:var(--ink-2);font-size:12px;line-height:1.5;letter-spacing:-.01em}
+.footer__inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.footer__cols{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:24px;
+  padding:36px 0 8px;
 }
-.review:hover{transform:translateY(-3px);border-color:var(--border-strong)}
-.review p{font-size:.95rem;color:var(--text-dim);margin:0;line-height:1.65}
-.review__who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:6px}
-.review__av{
-  width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;
-  font-size:.8rem;font-weight:700;color:var(--gold-soft);background:var(--gold-dim);border:1px solid rgba(217,164,65,.3)
-}
-.review__who b{display:block;font-size:.87rem;color:var(--text);font-weight:600;line-height:1.3}
-.review__who small{font-size:.76rem;color:var(--text-mute)}
+.footer h4{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.footer ul{list-style:none;display:grid;gap:9px}
+.footer ul a{color:var(--ink-2);transition:color .2s}
+.footer ul a:hover{color:var(--ink);text-decoration:underline}
+.footer__note{padding:18px 0;border-bottom:1px solid var(--line)}
+.footer__note a{color:var(--link)}
+.footer__note a:hover{text-decoration:underline}
+.footer__legal{padding:18px 0 34px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
+.footer__legal-links{display:flex;flex-wrap:wrap;gap:8px 16px}
+.footer__legal a:hover{text-decoration:underline}
 
 /* ============================================================
-   9. PRICING
+   9. REVEAL
    ============================================================ */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-.plan{
-  border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;
-  background:color-mix(in srgb,var(--surface) 72%,transparent);position:relative;min-width:0;
-  transition:transform .3s,border-color .3s
-}
-.plan:hover{transform:translateY(-4px);border-color:var(--border-strong)}
-.plan--featured{
-  background:linear-gradient(170deg,var(--surface-2),var(--surface));
-  border-color:rgba(217,164,65,.45);box-shadow:var(--shadow-lg)
-}
-.plan__tag{
-  position:absolute;top:-11px;left:26px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;
-  text-transform:uppercase;background:var(--gold);color:#14100a;padding:4px 10px;border-radius:999px;font-weight:500
-}
-.plan h3{font-family:var(--font-body);font-size:.83rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);font-weight:600;margin-bottom:14px}
-.plan__price{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
-.plan__price b{font-family:var(--font-display);font-size:2.9rem;font-weight:400;line-height:1;letter-spacing:-.02em}
-.plan__price s{color:var(--text-mute);font-size:1rem}
-.plan__price small{font-size:.82rem;color:var(--text-mute)}
-.plan__note{font-size:.82rem;color:var(--text-mute);margin-bottom:22px}
-.plan ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:11px;font-size:.89rem;color:var(--text-dim)}
-.plan ul li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start}
-.plan ul svg{width:14px;height:14px;color:var(--sage);margin-top:4px}
-.plan .btn{margin-top:auto;width:100%}
-.pay-note{
-  display:flex;align-items:center;gap:10px;justify-content:center;margin-top:26px;
-  font-size:.82rem;color:var(--text-mute);flex-wrap:wrap;text-align:center
-}
-.pay-note svg{width:14px;height:14px;color:var(--sage);flex:none}
-
-/* ============================================================
-   10. FAQ
-   ============================================================ */
-.faq{max-width:820px}
-details.qa{border-bottom:1px solid var(--border);padding:4px 0}
-details.qa summary{
-  list-style:none;cursor:pointer;padding:20px 44px 20px 0;position:relative;
-  font-weight:600;font-size:1rem;color:var(--text);transition:color .2s
-}
-details.qa summary::-webkit-details-marker{display:none}
-details.qa summary:hover{color:var(--gold-soft)}
-details.qa summary::after{
-  content:"";position:absolute;right:8px;top:50%;width:11px;height:11px;margin-top:-7px;
-  border-right:1.5px solid var(--text-mute);border-bottom:1.5px solid var(--text-mute);
-  transform:rotate(45deg);transition:transform .3s,border-color .3s
-}
-details.qa[open] summary::after{transform:rotate(-135deg);border-color:var(--gold)}
-details.qa p{font-size:.93rem;color:var(--text-dim);padding:0 44px 22px 0;margin:0;max-width:70ch}
-
-/* ============================================================
-   11. NEWSLETTER CTA
-   ============================================================ */
-.cta-band{
-  border:1px solid var(--border-strong);border-radius:26px;padding:56px 48px;position:relative;overflow:hidden;
-  background:
-    radial-gradient(600px 300px at 88% 0%,var(--gold-dim),transparent 70%),
-    linear-gradient(160deg,var(--surface-2),var(--surface));
-  box-shadow:var(--shadow-lg)
-}
-.cta-band__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.cta-band h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-bottom:14px}
-form.subscribe{display:flex;gap:10px;flex-wrap:wrap}
-form.subscribe input{
-  flex:1 1 220px;min-width:0;padding:15px 18px;border-radius:999px;background:color-mix(in srgb,var(--bg) 60%,transparent);
-  border:1px solid var(--border-strong);color:var(--text);font-size:.93rem;font-family:var(--font-body);
-  transition:border-color .25s,box-shadow .25s
-}
-form.subscribe input::placeholder{color:var(--text-mute)}
-form.subscribe input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim)}
-.form-msg{font-size:.82rem;color:var(--sage);margin-top:12px;min-height:1.2em}
-
-/* ============================================================
-   12. FOOTER
-   ============================================================ */
-footer{border-top:1px solid var(--border);padding:56px 0 34px;margin-top:20px;position:relative;z-index:2}
-.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
-.footer__brand p{font-size:.87rem;color:var(--text-mute);max-width:32ch;margin:14px 0 0}
-.footer h4{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-mute);margin:0 0 16px;font-weight:500}
-.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.footer ul a{font-size:.88rem;color:var(--text-dim);transition:color .2s}
-.footer ul a:hover{color:var(--gold-soft)}
-.footer__bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--border);font-size:.8rem;color:var(--text-mute)}
-
-/* ============================================================
-   13. READER MODAL
-   ============================================================ */
-.modal{
-  position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;
-  background:rgba(4,8,12,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
-}
-.modal.open{display:flex;animation:fadeIn .28s ease}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.modal__panel{
-  width:100%;max-width:760px;max-height:88vh;display:flex;flex-direction:column;
-  background:var(--surface);border:1px solid var(--border-strong);border-radius:20px;
-  box-shadow:0 50px 100px -40px #000;overflow:hidden;animation:popIn .35s cubic-bezier(.2,.8,.2,1)
-}
-@keyframes popIn{from{transform:translateY(18px) scale(.98);opacity:0}to{transform:none;opacity:1}}
-.modal__bar{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px;
-  border-bottom:1px solid var(--border);flex:none;background:color-mix(in srgb,var(--surface-2) 60%,transparent)
-}
-.modal__bar b{font-size:.86rem;letter-spacing:.02em}
-.modal__bar small{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);margin-top:2px}
-.modal__tools{display:flex;align-items:center;gap:6px}
-.tool{
-  width:32px;height:32px;border-radius:8px;border:1px solid var(--border);display:grid;place-items:center;
-  color:var(--text-dim);font-size:.8rem;font-weight:600;transition:.2s
-}
-.tool:hover{color:var(--gold);border-color:var(--gold)}
-.modal__body{padding:40px 44px 48px;overflow-y:auto;overscroll-behavior:contain}
-.modal__body .read-progress{height:2px;background:var(--border);border-radius:2px;margin-bottom:34px;overflow:hidden}
-.modal__body .read-progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .15s}
-.reader{font-family:var(--font-display);font-size:1.16rem;line-height:1.82;color:var(--text);max-width:62ch}
-.reader h2{font-size:1.9rem;margin:0 0 8px}
-.reader .chapter-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
-.reader p{color:color-mix(in srgb,var(--text) 82%,var(--text-dim));margin:0 0 1.15em}
-.reader p:first-of-type::first-letter{
-  float:left;font-size:3.6em;line-height:.82;padding:6px 12px 0 0;color:var(--gold)
-}
-.reader blockquote{
-  margin:26px 0;padding:18px 24px;border-left:2px solid var(--gold);background:var(--gold-dim);
-  font-style:italic;border-radius:0 10px 10px 0;color:var(--text)
-}
-.reader .end{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--border)}
-.modal__close{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border);color:var(--text-dim);transition:.2s}
-.modal__close:hover{color:#fff;background:#c0392b;border-color:#c0392b}
-
-/* toast */
-.toast{
-  position:fixed;left:50%;bottom:32px;transform:translate(-50%,120%);z-index:300;
-  opacity:0;visibility:hidden;pointer-events:none;
-  background:var(--surface-2);border:1px solid var(--border-strong);color:var(--text);
-  padding:13px 22px;border-radius:999px;font-size:.87rem;box-shadow:var(--shadow-lg);
-  transition:transform .45s cubic-bezier(.2,.8,.2,1);max-width:90vw;text-align:center
-}
-.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
-
-/* ============================================================
-   13b. 3D CONTROLS + MINI SHELF + LIBRARY
-   ============================================================ */
-.hero__right{display:flex;flex-direction:column;gap:12px;min-width:0}
-.stage__controls{position:absolute;right:4px;bottom:36px;display:flex;flex-direction:column;gap:6px;z-index:3}
-.stage__controls button{
-  width:32px;height:32px;border-radius:9px;border:1px solid var(--border-strong);
-  background:color-mix(in srgb,var(--bg) 60%,transparent);backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);color:var(--text-dim);display:grid;place-items:center;
-  font-size:1rem;line-height:1;transition:.2s
-}
-.stage__controls button:hover{color:var(--gold);border-color:var(--gold)}
-.mini-shelf{
-  display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
-  padding:11px 16px;border:1px solid var(--border);border-radius:14px;
-  background:color-mix(in srgb,var(--surface) 55%,transparent)
-}
-.mini-shelf__label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);white-space:nowrap}
-.mini-shelf__row{display:flex;gap:9px}
-.mini-book{
-  width:42px;height:58px;border-radius:2px 5px 5px 2px;padding:5px 3px;
-  background:linear-gradient(150deg,var(--c1),var(--c2));
-  border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 18px -12px #000;
-  display:flex;align-items:center;justify-content:center;transform:rotateY(-14deg);
-  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s
-}
-.mini-book:hover{transform:rotateY(0) translateY(-4px);box-shadow:0 14px 22px -12px #000}
-.mini-book b{font-family:var(--font-display);font-weight:400;font-size:.5rem;line-height:1.15;color:#f7f2e8;text-align:center}
-.mini-shelf__all{font-size:.78rem;color:var(--gold);font-weight:600;white-space:nowrap}
-.mini-shelf__all:hover{color:var(--gold-soft)}
-
-.library-tools{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px}
-.search-box{position:relative;flex:1 1 300px;max-width:400px;min-width:0}
-.search-box > svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text-mute);pointer-events:none}
-.search-box input{
-  width:100%;padding:14px 46px;border-radius:999px;font-family:var(--font-body);font-size:.92rem;
-  background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--border-strong);
-  color:var(--text);transition:border-color .25s,box-shadow .25s
-}
-.search-box input::placeholder{color:var(--text-mute)}
-.search-box input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim)}
-.search-box kbd{
-  position:absolute;right:12px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);
-  font-size:10px;color:var(--text-mute);border:1px solid var(--border);border-radius:5px;padding:2px 6px;pointer-events:none
-}
-.search-clear{
-  position:absolute;right:10px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;
-  display:none;place-items:center;color:var(--text-dim);background:var(--surface-2);border:1px solid var(--border)
-}
-.search-clear:hover{color:#fff;background:#c0392b;border-color:#c0392b}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{
-  padding:9px 16px;border-radius:999px;border:1px solid var(--border);font-size:.82rem;
-  color:var(--text-dim);transition:.2s;font-weight:500
-}
-.chip:hover{border-color:var(--border-strong);color:var(--text)}
-.chip.is-active{background:var(--gold);color:#14100a;border-color:var(--gold);font-weight:600}
-.library-count{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);margin:0 0 26px}
-.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:30px 20px}
-.book-card{min-width:0}
-.book-card.is-hidden{display:none}
-.book-card__stage{position:relative;height:236px;display:grid;place-items:end center;perspective:900px;margin-bottom:18px}
-.book-card__stage::after{
-  content:"";position:absolute;bottom:-2px;left:12%;right:12%;height:12px;border-radius:50%;
-  background:radial-gradient(ellipse at center,rgba(0,0,0,.55),transparent 72%);filter:blur(3px);z-index:0
-}
-.book-card__cover{
-  position:relative;width:154px;height:230px;padding:16px 14px 14px;z-index:1;overflow:hidden;
-  border-radius:3px 7px 7px 3px;border:1px solid rgba(255,255,255,.15);
-  background:linear-gradient(150deg,var(--c1),var(--c2));
-  box-shadow:0 28px 44px -26px rgba(0,0,0,.95),inset 0 0 0 1px rgba(255,255,255,.05);
-  transform:rotateY(-16deg) rotateX(2deg);transform-style:preserve-3d;
-  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s
-}
-.book-card:hover .book-card__cover{transform:rotateY(-3deg) rotateX(0) translateY(-8px);box-shadow:0 40px 56px -28px rgba(0,0,0,1)}
-.book-card__edge{position:absolute;right:0;top:0;bottom:0;width:6px;background:linear-gradient(90deg,#efe5d1,#bfb298);opacity:.9}
-.book-card__art{display:flex;flex-direction:column;height:100%;position:relative;z-index:1}
-.book-card__art small{font-family:var(--font-mono);font-size:7.5px;letter-spacing:.2em;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
-.book-card__art strong{font-family:var(--font-display);font-weight:400;font-size:1.16rem;line-height:1.12;color:#f8f4ea;letter-spacing:-.01em}
-.book-card__art em{margin-top:auto;font-family:var(--font-mono);font-size:7.5px;letter-spacing:.14em;color:rgba(255,255,255,.62);font-style:normal;text-transform:uppercase}
-.book-card__badge{
-  position:absolute;top:6px;right:0;z-index:2;font-family:var(--font-mono);font-size:8.5px;letter-spacing:.12em;
-  text-transform:uppercase;background:var(--gold);color:#14100a;padding:3px 8px;border-radius:999px;font-weight:500
-}
-.book-card__info h3{font-size:.92rem;margin-bottom:2px;line-height:1.3}
-.book-card__meta{font-size:.78rem;color:var(--text-mute);margin:0 0 10px}
-.book-card__foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:9px;border-top:1px solid var(--border)}
-.book-card__price{font-size:.9rem;font-weight:700;color:var(--text)}
-.book-card__foot .stars svg{width:11px;height:11px}
-.book-card__rate{font-size:.78rem;color:var(--text-dim);display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
-.book-card__rate b{color:var(--gold);font-size:.82rem;font-weight:400}
-.shelf-empty{grid-column:1/-1;text-align:center;padding:56px 20px;border:1px dashed var(--border-strong);border-radius:var(--radius);color:var(--text-mute);font-size:.92rem}
-.shelf-empty b{display:block;color:var(--text);margin-bottom:6px;font-family:var(--font-display);font-size:1.3rem;font-weight:400}
-
-/* ============================================================
-   14. SCROLL REVEAL
-   ============================================================ */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
-.reveal[data-d="1"]{transition-delay:.08s}
-.reveal[data-d="2"]{transition-delay:.16s}
-.reveal[data-d="3"]{transition-delay:.24s}
 
 /* ============================================================
-   15. RESPONSIVE
+   10. RESPONSIVE
    ============================================================ */
-@media(max-width:980px){
-  .hero__grid{grid-template-columns:1fr;gap:20px;min-height:0}
-  .hero__copy{max-width:100%;order:2}
-  .hero__right{order:1}
-  .stage{height:360px;min-height:320px}
-  .split,.author,.cta-band__grid{grid-template-columns:1fr;gap:38px}
-  .author{grid-template-columns:1fr}
-  .author__card{max-width:340px;margin:0 auto}
-  .plans{grid-template-columns:1fr}
-  .footer__grid{grid-template-columns:1fr 1fr}
+@media(max-width:1024px){
+  .footer__cols{grid-template-columns:repeat(3,1fr)}
+  .buy-band{grid-template-columns:1fr;gap:32px}
+  .buy-band__art{order:-1}
+}
+@media(max-width:834px){
   .nav__links{display:none}
   .nav__burger{display:grid}
-  .section-pad{padding:76px 0}
-  .modal__body{padding:28px 22px 36px}
-  .cta-band{padding:38px 24px;border-radius:20px}
+  .nav__tools{margin-left:auto;gap:20px}
+  .features{grid-template-columns:1fr;gap:26px}
+  .tiles{grid-template-columns:1fr}
+  .local-nav__links a:not(.local-nav__buy){display:none}
+  .local-nav__links{margin-left:auto}
 }
-@media(max-width:560px){
+@media(max-width:600px){
   body{font-size:16px}
-  .hero{padding-top:120px}
-  .hero__meta{gap:18px}
-  .hero__meta div{flex:1 1 40%}
-  .footer__grid{grid-template-columns:1fr}
-  .chapter--wide{grid-template-columns:1fr;gap:12px}
-  .btn{width:100%}
-  .hero__cta .btn{width:100%}
-  .modal{padding:0}
-  .modal__panel{max-height:100vh;height:100%;border-radius:0;border:0}
-  /* keep the top bar on one line on small phones */
-  .brand{font-size:.94rem;gap:9px}
-  .brand span:last-child{white-space:nowrap;line-height:1.2}
-  .brand small{display:none}
-  #themeToggle{display:none}
-  .nav{padding:12px 0}
-  .nav__right .btn{padding:10px 16px;font-size:.82rem}
-  .nav__right{gap:8px}
-  .icon-btn{width:36px;height:36px}
+  .footer__cols{grid-template-columns:repeat(2,1fr);gap:26px 18px}
+  .footer__legal{flex-direction:column;align-items:flex-start}
+  .hero__sub{font-size:17px}
+  .links{gap:10px 20px}
+  .btn{padding:11px 20px;font-size:16px}
+  .showcase__art{gap:12px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
@@ -624,625 +385,392 @@ footer{border-top:1px solid var(--border);padding:56px 0 34px;margin-top:20px;po
 </head>
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
-
-<!-- ================= NAV ================= -->
-<header class="nav" id="nav">
-  <div class="wrap nav__inner">
-    <a class="brand" href="#top">
-      <span class="brand__mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#14100a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/>
-        </svg>
-      </span>
-      <span>The Calm Edge<small>Ebook Studio</small></span>
+<!-- ================= GLOBAL NAV ================= -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#" aria-label="Kitably home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/></svg>
+      <span>Kitably</span>
     </a>
-    <nav class="nav__links">
+
+    <nav class="nav__links" aria-label="Main">
       <a href="#book">The Book</a>
-      <a href="store.html">Store</a>
-      <a href="#chapters">Chapters</a>
-      <a href="#library">Library</a>
-      <a href="#author">Author</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
+      <a href="#latest">Store</a>
+      <a href="#collections">Collections</a>
+      <a href="store.html">Shop all</a>
+      <a href="#support">Support</a>
     </nav>
-    <div class="nav__right">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme" title="Light / dark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>
-        </svg>
+
+    <div class="nav__tools">
+      <button type="button" id="searchOpen" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
       </button>
-      <a class="btn btn--gold btn--sm" href="#pricing">Get the ebook</a>
-      <button class="icon-btn nav__burger" id="burger" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <a class="nav__bag" href="store.html" aria-label="Bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+        <span id="bagCount" hidden>0</span>
+      </a>
+      <button type="button" class="nav__burger" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
       </button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<div class="menu" id="menu">
+  <a href="#book">The Book</a>
+  <a href="#latest">Store</a>
+  <a href="#collections">Collections</a>
+  <a href="store.html">Shop all books</a>
+  <a href="#support">Support</a>
+  <a href="classic.html">Original site</a>
+</div>
+
+<main>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="wrap hero__grid">
-    <div class="hero__copy">
-      <p class="eyebrow">Ebook &middot; 2nd edition &middot; 2026</p>
-      <h1>
-        <span>Do your best</span>
-        <span>work in a</span>
-        <span><em class="serif">noisy</em> world.</span>
-      </h1>
-      <p class="hero__sub">
-        <strong style="color:var(--text);font-weight:600">The Calm Edge</strong> is a 214-page field guide to
-        attention, deep work and getting things finished — built for people who work inside
-        notifications, open offices and always-on chats.
-      </p>
-      <div class="hero__cta">
-        <a class="btn btn--gold" href="#pricing">
-          Get instant access
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <button class="btn btn--ghost" data-open-reader>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/></svg>
-          Read a free chapter
-        </button>
-      </div>
-      <dl class="hero__meta">
-        <div><dt>Format</dt><dd>PDF + EPUB</dd></div>
-        <div><dt>Length</dt><dd>214 pages</dd></div>
-        <div><dt>Delivery</dt><dd>Instant download</dd></div>
-        <div>
-          <dt>Rating</dt>
-          <dd>
-            <span class="stars" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-            </span>
-            4.8 / 5
-          </dd>
-        </div>
-      </dl>
+  <div class="hero__glow"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__eyebrow">New edition</p>
+    <h1 class="h1">The Calm Edge</h1>
+    <p class="hero__sub">Do your best work in a noisy world. A field guide to attention, deep work and finishing what matters.</p>
+    <div class="links links--center">
+      <a class="link" href="#book">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+      <a class="link" href="#buy">Buy — ₹399 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
     </div>
 
-    <div class="hero__right">
-      <div class="stage">
-        <div class="stage__glow"></div>
-        <canvas id="book3d" aria-label="Interactive 3D model of the ebook — drag to rotate, scroll to zoom"></canvas>
-        <div class="book-fallback" id="bookFallback">
-          <div class="book-fallback__inner">
-            <div class="book-fallback__face">The Calm Edge<small>D. MEHTA</small></div>
-          </div>
+    <div class="hero__visual">
+      <div class="hero__floor"></div>
+      <div class="book" style="--bw:clamp(200px,26vw,300px);--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583">
+        <div class="book__pages"></div>
+        <div class="book__cover">
+          <span class="book__kicker">A practical guide</span>
+          <div class="book__rule"></div>
+          <span class="book__title">The Calm Edge</span>
+          <span class="book__author">Devika Mehta</span>
         </div>
-        <div class="stage__controls">
-          <button type="button" id="zoomIn" aria-label="Zoom in">+</button>
-          <button type="button" id="zoomOut" aria-label="Zoom out">&minus;</button>
-          <button type="button" id="zoomReset" aria-label="Reset view" title="Reset view">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
-          </button>
-        </div>
-        <div class="stage__hint">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg>
-          Drag to rotate &middot; scroll to zoom
-        </div>
-      </div>
-
-      <div class="mini-shelf">
-        <span class="mini-shelf__label">More titles</span>
-        <div class="mini-shelf__row">
-          <button type="button" class="mini-book" data-jump="Deep Work, Deep Rest" style="--c1:#243a52;--c2:#0f1a26" aria-label="Deep Work, Deep Rest"><b>Deep<br>Work</b></button>
-          <button type="button" class="mini-book" data-jump="Money, Quietly" style="--c1:#1f3b35;--c2:#0e1b18" aria-label="Money, Quietly"><b>Money</b></button>
-          <button type="button" class="mini-book" data-jump="Write Like a Human" style="--c1:#3a2430;--c2:#1b1116" aria-label="Write Like a Human"><b>Write</b></button>
-          <button type="button" class="mini-book" data-jump="Sleep Is a Strategy" style="--c1:#2b2f42;--c2:#14161f" aria-label="Sleep Is a Strategy"><b>Sleep</b></button>
-        </div>
-        <a class="mini-shelf__all" href="#library">All 8 &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= TRUST STRIP ================= -->
-<div class="trust">
-  <div class="wrap trust__inner">
-    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Instant download after payment</div>
-    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lifetime updates, free</div>
-    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Read on phone, tablet or Kindle</div>
-    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 7-day money-back promise</div>
+<!-- ================= LOCAL NAV ================= -->
+<nav class="local-nav" aria-label="The Calm Edge">
+  <div class="local-nav__inner">
+    <span class="local-nav__title">The Calm Edge</span>
+    <div class="local-nav__links">
+      <a href="#book" class="is-active">Overview</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#buy" class="local-nav__buy">Buy</a>
+    </div>
   </div>
-</div>
+</nav>
 
-<!-- ================= LIBRARY / OTHER BOOKS ================= -->
-<section class="section-pad" id="library" style="padding-top:58px">
-  <div class="wrap">
-    <div class="section-head reveal" style="max-width:660px">
-      <p class="eyebrow">The shelf</p>
-      <h2>Other books from the studio.</h2>
-      <p class="lead">Same studio, different problems. Search the shelf by title, author or topic &mdash; or pick a category.</p>
+<!-- ================= OVERVIEW / SHOWCASE ================= -->
+<section class="pad grey-2" id="book">
+  <div class="wrap showcase reveal">
+    <p class="eyebrow">214 pages. 12 chapters.</p>
+    <h2 class="h2">Not another book about productivity.</h2>
+    <p class="body-lg">A system you can actually run — built for people who work inside notifications, open offices and always-on group chats.</p>
+    <div class="links links--center">
+      <a class="link" href="#buy">Buy — ₹399 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+      <a class="link" href="classic.html">Read a free chapter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
     </div>
 
-    <div class="library-tools reveal">
-      <div class="search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
-        <input type="search" id="bookSearch" placeholder="Search titles, authors, topics..." aria-label="Search the book library" autocomplete="off">
-        <kbd id="searchKbd">/</kbd>
-        <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">
-          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
+    <div class="showcase__art">
+      <div class="book" style="--bw:clamp(120px,15vw,168px);--c1:#3b2f2a;--c2:#1a1310;--acc:#e8c583;animation-delay:-2s">
+        <div class="book__pages"></div>
+        <div class="book__cover">
+          <span class="book__kicker">Letters</span>
+          <div class="book__rule"></div>
+          <span class="book__title">Letters to a Younger Me</span>
+          <span class="book__author">Nandita Bose</span>
+        </div>
       </div>
-      <div class="chips" role="group" aria-label="Filter by category">
-        <button type="button" class="chip is-active" data-cat="all">All</button>
-        <button type="button" class="chip" data-cat="focus">Focus</button>
-        <button type="button" class="chip" data-cat="career">Career</button>
-        <button type="button" class="chip" data-cat="money">Money</button>
-        <button type="button" class="chip" data-cat="writing">Writing</button>
-        <button type="button" class="chip" data-cat="health">Health</button>
+      <div class="book" style="--bw:clamp(150px,19vw,212px);--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583">
+        <div class="book__pages"></div>
+        <div class="book__cover">
+          <span class="book__kicker">A practical guide</span>
+          <div class="book__rule"></div>
+          <span class="book__title">The Calm Edge</span>
+          <span class="book__author">Devika Mehta</span>
+        </div>
       </div>
-    </div>
-
-    <p class="library-count" id="shelfCount">8 titles</p>
-
-    <div class="shelf" id="shelf">
-
-      <article class="book-card reveal" data-cat="focus" data-search="the calm edge devika mehta focus deep work attention productivity time management bestseller">
-        <div class="book-card__stage">
-          <span class="book-card__badge">This book</span>
-          <div class="book-card__cover" style="--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>The Calm<br>Edge</strong><em>Devika Mehta</em></div>
-          </div>
+      <div class="book" style="--bw:clamp(120px,15vw,168px);--c1:#1f3b35;--c2:#0e1b18;--acc:#8fd0bd;animation-delay:-4s">
+        <div class="book__pages"></div>
+        <div class="book__cover">
+          <span class="book__kicker">Money</span>
+          <div class="book__rule"></div>
+          <span class="book__title">Money, Quietly</span>
+          <span class="book__author">Aditya Rao</span>
         </div>
-        <div class="book-card__info">
-          <h3>The Calm Edge</h3>
-          <p class="book-card__meta">Devika Mehta &middot; Focus</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;399</span><span class="book-card__rate"><b>&#9733;</b>4.8</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="focus" data-search="deep work deep rest kabir rane focus rest recovery burnout energy sleep">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#243a52;--c2:#0f1a26;--acc:#9dc0e0">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Deep Work,<br>Deep Rest</strong><em>Kabir Rane</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>Deep Work, Deep Rest</h3>
-          <p class="book-card__meta">Kabir Rane &middot; Focus</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;349</span><span class="book-card__rate"><b>&#9733;</b>4.6</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="career" data-search="the first 90 days at work sana qureshi career new job onboarding manager promotion interview">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#2e3324;--c2:#14170f;--acc:#c3d08a">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>First 90<br>Days</strong><em>Sana Qureshi</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>The First 90 Days at Work</h3>
-          <p class="book-card__meta">Sana Qureshi &middot; Career</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;449</span><span class="book-card__rate"><b>&#9733;</b>4.7</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="money" data-search="money quietly aditya rao money saving investing budgeting sip salary personal finance">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#1f3b35;--c2:#0e1b18;--acc:#8fd0bd">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Money,<br>Quietly</strong><em>Aditya Rao</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>Money, Quietly</h3>
-          <p class="book-card__meta">Aditya Rao &middot; Money</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;399</span><span class="book-card__rate"><b>&#9733;</b>4.5</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="writing" data-search="write like a human nandita bose writing copywriting editing style plain language newsletter">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#3a2430;--c2:#1b1116;--acc:#e5a8a0">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Write Like<br>a Human</strong><em>Nandita Bose</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>Write Like a Human</h3>
-          <p class="book-card__meta">Nandita Bose &middot; Writing</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;299</span><span class="book-card__rate"><b>&#9733;</b>4.9</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="money" data-search="the freelancers ledger rhea kapadia money freelance pricing invoices clients tax rates">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#22303a;--c2:#101820;--acc:#a8c6d8">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Freelancer&#39;s<br>Ledger</strong><em>Rhea Kapadia</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>The Freelancer&#39;s Ledger</h3>
-          <p class="book-card__meta">Rhea Kapadia &middot; Money</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;499</span><span class="book-card__rate"><b>&#9733;</b>4.4</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="health" data-search="sleep is a strategy ila menon health sleep recovery energy habits morning routine">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#2b2f42;--c2:#14161f;--acc:#b8bfe0">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Sleep Is a<br>Strategy</strong><em>Dr. Ila Menon</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>Sleep Is a Strategy</h3>
-          <p class="book-card__meta">Dr. Ila Menon &middot; Health</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;349</span><span class="book-card__rate"><b>&#9733;</b>4.7</span></div>
-        </div>
-      </article>
-
-      <article class="book-card reveal" data-cat="career" data-search="small teams big output vikram shetty career team management meetings hiring remote">
-        <div class="book-card__stage">
-          <div class="book-card__cover" style="--c1:#3a3222;--c2:#1c170f;--acc:#e0c78f">
-            <span class="book-card__edge"></span>
-            <div class="book-card__art"><small>Ebook</small><strong>Small Teams,<br>Big Output</strong><em>Vikram Shetty</em></div>
-          </div>
-        </div>
-        <div class="book-card__info">
-          <h3>Small Teams, Big Output</h3>
-          <p class="book-card__meta">Vikram Shetty &middot; Career</p>
-          <div class="book-card__foot"><span class="book-card__price">&#8377;549</span><span class="book-card__rate"><b>&#9733;</b>4.6</span></div>
-        </div>
-      </article>
-
-      <div class="shelf-empty" id="shelfEmpty" hidden>
-        <b>No titles matched that</b>
-        Try another word &mdash; or clear the search and browse the whole shelf.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= WHAT'S INSIDE ================= -->
-<section class="section-pad" id="book">
-  <div class="wrap split">
-    <div class="reveal">
-      <p class="eyebrow">What's inside</p>
-      <h2>Not another book about productivity. A system you can actually run.</h2>
-      <p class="lead" style="margin-top:18px">
-        Most advice stops at "turn off notifications". This book goes further — it gives you the
-        routines, templates and scripts that survive a real job, a real family and a phone that
-        never stops buzzing.
-      </p>
-      <ul class="checklist" style="margin-top:30px">
-        <li>
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-          <div><strong>A 90-minute deep-work block that works</strong><span>The exact structure, warm-up and shutdown ritual, tested across 400+ workdays.</span></div>
-        </li>
-        <li>
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-          <div><strong>Scripts to protect your time</strong><span>Word-for-word replies for the manager, the client and the group chat that keeps pinging.</span></div>
-        </li>
-        <li>
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-          <div><strong>Printable worksheets</strong><span>Weekly review, energy audit and a one-page "attention budget" you can pin above your desk.</span></div>
-        </li>
-        <li>
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-          <div><strong>Recovery, not hustle</strong><span>How to end the day without carrying the work — and why rest is a skill you practise.</span></div>
-        </li>
-      </ul>
+<!-- ================= HIGHLIGHTS ================= -->
+<section class="pad dark" id="highlights">
+  <div class="wrap reveal">
+    <div class="showcase showcase--left">
+      <p class="eyebrow" style="color:#d9a441">Highlights</p>
+      <h2 class="h2">Small habits. Compounding returns.</h2>
     </div>
-
-    <div class="reveal" data-d="1">
-      <div class="spec-card">
-        <div class="spec-card__head">
-          <span>Product details</span>
-          <span style="color:var(--gold)">2nd edition</span>
-        </div>
-        <div class="spec-row"><b>Pages</b><span>214</span></div>
-        <div class="spec-row"><b>Chapters</b><span>12</span></div>
-        <div class="spec-row"><b>Formats</b><span>PDF · EPUB</span></div>
-        <div class="spec-row"><b>Language</b><span>English</span></div>
-        <div class="spec-row"><b>Worksheets</b><span>9 printable</span></div>
-        <div class="spec-row"><b>Reading time</b><span>~4 hours</span></div>
-        <div class="spec-row"><b>Last updated</b><span>Feb 2026</span></div>
-        <div class="spec-row"><b>Device</b><span>Any</span></div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature__num">90</div>
+        <div class="feature__label">minute focus block</div>
+        <p>The exact structure, warm-up and shutdown ritual — tested across 400+ workdays.</p>
       </div>
-      <button class="btn btn--ghost" data-open-reader style="width:100%;margin-top:16px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/></svg>
-        Preview chapter 1 in the browser
-      </button>
+      <div class="feature">
+        <div class="feature__num">9</div>
+        <div class="feature__label">printable worksheets</div>
+        <p>Weekly review, energy audit and a one-page attention budget for your desk.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__num">0</div>
+        <div class="feature__label">apps to install</div>
+        <p>No subscription, no dashboard. Paper, a timer and a decision are enough.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= CHAPTERS ================= -->
-<section class="section-pad" id="chapters" style="padding-top:20px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Table of contents</p>
-      <h2>Twelve chapters, each with something you can try the same day.</h2>
-      <p class="lead">No theory for the sake of theory. Every chapter ends with a single exercise and a checklist.</p>
+<section class="pad" id="chapters">
+  <div class="wrap reveal">
+    <div class="showcase showcase--left">
+      <p class="eyebrow">Inside the book</p>
+      <h2 class="h2">Twelve chapters. One exercise each.</h2>
+      <p class="body-lg">Short, plain language, and something you can try the same day.</p>
     </div>
 
-    <div class="chapters">
-      <article class="chapter reveal">
-        <span class="chapter__num">01</span>
-        <h3>The attention audit</h3>
-        <p>Find out where your day actually goes. A 20-minute exercise, no apps needed.</p>
-      </article>
-      <article class="chapter reveal" data-d="1">
-        <span class="chapter__num">02</span>
-        <h3>Why context switching is expensive</h3>
-        <p>The real cost of "just checking" — and the arithmetic that changes how you plan.</p>
-      </article>
-      <article class="chapter reveal" data-d="2">
-        <span class="chapter__num">03</span>
-        <h3>The 90-minute block</h3>
-        <p>Structure, warm-up, shutdown. The one habit everything else depends on.</p>
-      </article>
-      <article class="chapter reveal">
-        <span class="chapter__num">04</span>
-        <h3>Designing your environment</h3>
-        <p>Desk, screen, room, phone. Small physical changes that remove willpower from the equation.</p>
-      </article>
-      <article class="chapter reveal" data-d="1">
-        <span class="chapter__num">05</span>
-        <h3>Saying no without burning bridges</h3>
-        <p>Scripts for the three conversations everyone avoids having.</p>
-      </article>
-      <article class="chapter reveal" data-d="2">
-        <span class="chapter__num">06</span>
-        <h3>The inbox that closes</h3>
-        <p>A two-window system for email and chat that keeps you reachable but not interruptible.</p>
-      </article>
-      <article class="chapter reveal">
-        <span class="chapter__num">07</span>
-        <h3>Energy, not hours</h3>
-        <p>Map your day to your peaks. Schedule the hard thing where your brain already is.</p>
-      </article>
-      <article class="chapter reveal" data-d="1">
-        <span class="chapter__num">08</span>
-        <h3>Finishing things</h3>
-        <p>Why projects stall at 80% and the three-question test that unsticks them.</p>
-      </article>
-      <article class="chapter reveal" data-d="2">
-        <span class="chapter__num">09</span>
-        <h3>Working with other people</h3>
-        <p>Meetings, handoffs and reviews that don't eat your whole afternoon.</p>
-      </article>
-      <article class="chapter reveal">
-        <span class="chapter__num">10</span>
-        <h3>The weekly review</h3>
-        <p>Forty minutes, once a week, that keeps the whole system from collapsing.</p>
-      </article>
-      <article class="chapter reveal" data-d="1">
-        <span class="chapter__num">11</span>
-        <h3>Rest as a skill</h3>
-        <p>How to actually stop at 6pm — and why the guilt is the harder problem than the work.</p>
-      </article>
-      <article class="chapter reveal" data-d="2">
-        <span class="chapter__num">12</span>
-        <h3>When the system breaks</h3>
-        <p>Bad weeks, deadlines, travel. How to recover without rebuilding from zero.</p>
-      </article>
+    <div class="features" style="margin-top:44px">
+      <div class="feature">
+        <div class="feature__label" style="color:var(--ink-3)">01 — 04</div>
+        <h3 class="h4" style="margin-top:10px">See it clearly</h3>
+        <p>The attention audit, the real cost of context switching, the 90-minute block, and designing the room you work in.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__label" style="color:var(--ink-3)">05 — 08</div>
+        <h3 class="h4" style="margin-top:10px">Protect it</h3>
+        <p>Saying no without burning bridges, an inbox that closes, energy instead of hours, and finishing what you start.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__label" style="color:var(--ink-3)">09 — 12</div>
+        <h3 class="h4" style="margin-top:10px">Keep it running</h3>
+        <p>Working with other people, the weekly review, rest as a skill, and what to do when the whole system breaks.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="chapter chapter--wide reveal">
-        <span class="chapter__num">+ APPENDIX</span>
-        <div>
-          <h3>Nine printable worksheets, a one-page cheat sheet and the full 30-day plan</h3>
-          <p>Everything in the book, condensed into pages you can print and stick on a wall.</p>
+<!-- ================= LATEST / STORE RAIL ================= -->
+<section class="pad grey" id="latest">
+  <div class="wrap reveal">
+    <div class="showcase showcase--left">
+      <p class="eyebrow">The latest</p>
+      <h2 class="h2">Take a look at what's new right now.</h2>
+    </div>
+  </div>
+
+  <div class="wrap wrap--wide reveal">
+    <div class="rail-wrap">
+      <div class="rail" id="rail">
+        <article class="card">
+          <div class="card__tag">Bestseller</div>
+          <div class="book" style="--bw:132px;--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Guide</span><div class="book__rule"></div><span class="book__title" >The Calm Edge</span><span class="book__author">Devika Mehta</span></div>
+          </div>
+          <h3>The Calm Edge</h3>
+          <p>Devika Mehta · Self-Help</p>
+          <div class="card__price">₹399 <s>₹699</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+
+        <article class="card">
+          <div class="card__tag">New</div>
+          <div class="book" style="--bw:132px;--c1:#243a52;--c2:#0f1a26;--acc:#9dc0e0;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Sci-Fi</span><div class="book__rule"></div><span class="book__title" >Quantum Bazaar</span><span class="book__author">Aryan Kapoor</span></div>
+          </div>
+          <h3>Quantum Bazaar</h3>
+          <p>Aryan Kapoor · Sci-Fi</p>
+          <div class="card__price">₹299 <s>₹549</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+
+        <article class="card">
+          <div class="card__tag">Bestseller</div>
+          <div class="book" style="--bw:132px;--c1:#1f3b35;--c2:#0e1b18;--acc:#8fd0bd;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Money</span><div class="book__rule"></div><span class="book__title" >Money, Quietly</span><span class="book__author">Aditya Rao</span></div>
+          </div>
+          <h3>Money, Quietly</h3>
+          <p>Aditya Rao · Non-Fiction</p>
+          <div class="card__price">₹399 <s>₹699</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+
+        <article class="card">
+          <div class="card__tag">Editor's pick</div>
+          <div class="book" style="--bw:132px;--c1:#3b2f2a;--c2:#1a1310;--acc:#e8c583;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Letters</span><div class="book__rule"></div><span class="book__title" >Letters to a Younger Me</span><span class="book__author">Nandita Bose</span></div>
+          </div>
+          <h3>Letters to a Younger Me</h3>
+          <p>Nandita Bose · Self-Help</p>
+          <div class="card__price">₹299 <s>₹549</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+
+        <article class="card">
+          <div class="card__tag">Bestseller</div>
+          <div class="book" style="--bw:132px;--c1:#2e3324;--c2:#14170f;--acc:#c3d08a;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">UPSC</span><div class="book__rule"></div><span class="book__title" >10 Year Papers</span><span class="book__author">Dr. Ritu Sharma</span></div>
+          </div>
+          <h3>UPSC Prelims: 10 Year Papers</h3>
+          <p>Dr. Ritu Sharma · Exams</p>
+          <div class="card__price">₹199 <s>₹399</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+
+        <article class="card">
+          <div class="card__tag">New</div>
+          <div class="book" style="--bw:132px;--c1:#3a2430;--c2:#1b1116;--acc:#e5a8a0;animation:none;transform:perspective(900px) rotateY(-12deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Fiction</span><div class="book__rule"></div><span class="book__title" >Midnight in Malabar</span><span class="book__author">Anjali Nair</span></div>
+          </div>
+          <h3>Midnight in Malabar</h3>
+          <p>Anjali Nair · Fiction</p>
+          <div class="card__price">₹249 <s>₹499</s></div>
+          <a class="btn btn--sm" href="store.html">Buy</a>
+        </article>
+      </div>
+    </div>
+    <div class="links links--center" style="margin-top:6px">
+      <a class="link" href="store.html">See all books <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COLLECTIONS (TILES) ================= -->
+<section class="pad" id="collections">
+  <div class="wrap wrap--wide reveal">
+    <div class="showcase showcase--left" style="margin-bottom:28px">
+      <p class="eyebrow">Collections</p>
+      <h2 class="h2">Find your shelf.</h2>
+    </div>
+
+    <div class="tiles">
+      <div class="tile tile--warm">
+        <p class="eyebrow">Focus</p>
+        <h3 class="h3">Do the work that matters.</h3>
+        <p class="body-lg">Three books on attention, energy and finishing — written for people with too many tabs open.</p>
+        <div class="links links--center">
+          <a class="link" href="store.html">Shop the collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tile__art">
+          <div class="book" style="--bw:120px;--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583;animation:none;transform:perspective(900px) rotateY(-14deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Guide</span><div class="book__rule"></div><span class="book__title" >The Calm Edge</span><span class="book__author">D. Mehta</span></div>
+          </div>
+          <div class="book" style="--bw:120px;--c1:#3b2f2a;--c2:#1a1310;--acc:#e8c583;animation:none;transform:perspective(900px) rotateY(-14deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">Letters</span><div class="book__rule"></div><span class="book__title" >Letters to a Younger Me</span><span class="book__author">N. Bose</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile tile--dark">
+        <p class="eyebrow" style="color:#d9a441">Exam prep</p>
+        <h3 class="h3">Solved, in Hindi and English.</h3>
+        <p class="body-lg">Past papers, topic-wise breakdowns and 30-day plans that fit around a full-time job.</p>
+        <div class="links links--center">
+          <a class="link" href="store.html" style="color:#2997ff">Shop exam prep <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tile__art">
+          <div class="book" style="--bw:120px;--c1:#2e3324;--c2:#14170f;--acc:#c3d08a;animation:none;transform:perspective(900px) rotateY(-14deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">UPSC</span><div class="book__rule"></div><span class="book__title" >10 Year Papers</span><span class="book__author">R. Sharma</span></div>
+          </div>
+          <div class="book" style="--bw:120px;--c1:#33243a;--c2:#150f1c;--acc:#c9a6e0;animation:none;transform:perspective(900px) rotateY(-14deg)">
+            <div class="book__pages"></div>
+            <div class="book__cover"><span class="book__kicker">SSC</span><div class="book__rule"></div><span class="book__title" >Maths in 30 Days</span><span class="book__author">K. Joshi</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= AUTHOR ================= -->
-<section class="section-pad" id="author" style="padding-top:20px">
-  <div class="wrap author">
-    <div class="author__card reveal">
-      <div class="author__avatar">DM</div>
-      <h3>Devika Mehta</h3>
-      <p class="role">Writer &amp; Product Lead</p>
-      <p style="font-size:.88rem;margin:0">
-        Twelve years building products at early-stage startups, three of them
-        fully remote across four time zones.
-      </p>
-      <div class="author__socials">
-        <a class="icon-btn" href="#" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21 21h-5.9l-4.6-6-5.3 6H2.1l7.3-8.3L2.6 3h6l4.2 5.5zm-1.1 16h1.7L7.4 4.7H5.6z"/></svg>
-        </a>
-        <a class="icon-btn" href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6 2.49 2.49 0 0 1 4.98 3.5zM3 8.98h4V21H3zM9.5 8.98h3.8v1.64h.06a4.17 4.17 0 0 1 3.75-2.06c4 0 4.74 2.5 4.74 5.75V21h-4v-5.9c0-1.4-.03-3.2-2-3.2s-2.3 1.5-2.3 3.1V21h-4z"/></svg>
-        </a>
-        <a class="icon-btn" href="#" aria-label="Newsletter">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
-        </a>
+<!-- ================= QUOTE ================= -->
+<section class="pad dark">
+  <div class="wrap reveal">
+    <figure class="quote">
+      <blockquote>“I didn't write this book because I'm disciplined. I wrote it because I was drowning — and I needed a system that worked on my worst days, not my best ones.”</blockquote>
+      <figcaption>Devika Mehta, author</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= BUY ================= -->
+<section class="pad grey-2" id="buy">
+  <div class="wrap buy-band reveal">
+    <div>
+      <p class="eyebrow">Buy The Calm Edge</p>
+      <h2 class="h2" style="margin-top:8px">Yours for life.</h2>
+      <div class="buy-band__price">
+        <b>₹399</b><s>₹699</s><span>Save 43%</span>
+      </div>
+      <p class="muted" >One payment. Every future edition free.</p>
+
+      <ul class="buy-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 214-page ebook — PDF + EPUB</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Nine printable worksheets</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Read on phone, tablet, laptop or Kindle</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 7-day refund, no questions</li>
+      </ul>
+
+      <div class="buy-actions">
+        <a class="btn" href="store.html">Buy now</a>
+        <a class="btn btn--ghost" href="classic.html">Read a free chapter</a>
+      </div>
+      <p class="buy-note">UPI, cards and netbanking · Instant download · GST invoice available</p>
+    </div>
+
+    <div class="buy-band__art" style="display:flex;justify-content:center">
+      <div class="book" style="--bw:clamp(190px,24vw,260px);--c1:#1d2d3c;--c2:#0b131b;--acc:#e8c583">
+        <div class="book__pages"></div>
+        <div class="book__cover">
+          <span class="book__kicker">A practical guide</span>
+          <div class="book__rule"></div>
+          <span class="book__title">The Calm Edge</span>
+          <span class="book__author">Devika Mehta</span>
+        </div>
       </div>
     </div>
-
-    <div class="reveal" data-d="1">
-      <p class="eyebrow">A note from the author</p>
-      <blockquote class="quote">
-        "I didn't write this book because I'm disciplined. I wrote it because I was drowning —
-        and I needed a system that worked on my worst days, not my best ones."
-      </blockquote>
-      <p>
-        I spent two years taking notes on what actually helped: which habits survived a bad week,
-        which tools I abandoned after a month, which advice made me feel worse instead of better.
-        Then I cut everything that didn't work.
-      </p>
-      <p>
-        What's left is in this book — short chapters, plain language, and exercises that take
-        less time than the meeting they replace. You can read it in a weekend and run it on Monday.
-      </p>
-      <a class="btn btn--ghost btn--sm" href="#pricing" style="margin-top:10px">See what's included</a>
-    </div>
   </div>
 </section>
 
-<!-- ================= REVIEWS ================= -->
-<section class="section-pad" id="reviews" style="padding-top:20px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Reader notes</p>
-      <h2>What people did with it.</h2>
-    </div>
-    <div class="reviews">
-      <article class="review reveal">
-        <span class="stars" aria-label="5 out of 5">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-        </span>
-        <p>The 90-minute block chapter alone was worth the price. I've been running it for six weeks and my sprint work finally finishes on time.</p>
-        <div class="review__who"><span class="review__av">AK</span><div><b>Ananya K.</b><small>Backend engineer, Bengaluru</small></div></div>
-      </article>
-      <article class="review reveal" data-d="1">
-        <span class="stars" aria-label="5 out of 5">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-        </span>
-        <p>I expected another hustle book. It's the opposite — the rest chapter made me realise I was treating exhaustion as a personality trait.</p>
-        <div class="review__who"><span class="review__av">RS</span><div><b>Rohit S.</b><small>Founder, Pune</small></div></div>
-      </article>
-      <article class="review reveal" data-d="2">
-        <span class="stars" aria-label="4 out of 5">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.9 6.3 6.9.8-5 4.8 1.3 6.8L12 17.5 5.9 20.7 7.2 13.9 2.2 9.1l6.9-.8z"/></svg>
-        </span>
-        <p>Practical, short, no fluff. The worksheets are the part I keep going back to — I printed the weekly review and it's on my desk.</p>
-        <div class="review__who"><span class="review__av">MP</span><div><b>Meera P.</b><small>Design lead, Mumbai</small></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PRICING ================= -->
-<section class="section-pad" id="pricing" style="padding-top:20px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Pricing</p>
-      <h2>Pay once. Keep it forever.</h2>
-      <p class="lead">No subscription, no upsell funnel. Buy it, download it, get every future edition free.</p>
-    </div>
-
-    <div class="plans">
-      <article class="plan reveal">
-        <h3>Ebook only</h3>
-        <div class="plan__price"><b>₹399</b><s>₹699</s></div>
-        <p class="plan__note">For people who just want to read.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 214-page ebook</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PDF + EPUB formats</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lifetime free updates</li>
-        </ul>
-        <button class="btn btn--ghost" data-buy="Ebook only — ₹399">Buy ebook</button>
-      </article>
-
-      <article class="plan plan--featured reveal" data-d="1">
-        <span class="plan__tag">Most popular</span>
-        <h3>Ebook + workbook</h3>
-        <div class="plan__price"><b>₹699</b><s>₹1,199</s></div>
-        <p class="plan__note">The book plus the printable system.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Everything in Ebook only</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 9 printable worksheets</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 30-day implementation plan</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> One-page desk cheat sheet</li>
-        </ul>
-        <button class="btn btn--gold" data-buy="Ebook + workbook — ₹699">Get both</button>
-      </article>
-
-      <article class="plan reveal" data-d="2">
-        <h3>Team pack</h3>
-        <div class="plan__price"><b>₹2,499</b><small>up to 10 people</small></div>
-        <p class="plan__note">For teams running a focus experiment together.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 10 ebook + workbook copies</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 60-minute workshop agenda</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Shared team templates</li>
-        </ul>
-        <button class="btn btn--ghost" data-buy="Team pack — ₹2,499">Buy for the team</button>
-      </article>
-    </div>
-
-    <p class="pay-note">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18"/></svg>
-      UPI, cards, netbanking &amp; wallets accepted &middot; secure checkout &middot; 7-day refund
-    </p>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section class="section-pad" id="faq" style="padding-top:20px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Questions</p>
-      <h2>Before you buy.</h2>
-    </div>
-    <div class="faq reveal">
-      <details class="qa" open>
-        <summary>How do I get the book after paying?</summary>
-        <p>Instantly. The download link appears on the thank-you page and is emailed to you within a minute. It never expires, so you can re-download it any time.</p>
-      </details>
-      <details class="qa">
-        <summary>Which devices can I read it on?</summary>
-        <p>Any. You get a PDF (great on laptop and tablet) and an EPUB (great on phone and Kindle). Both are DRM-free, so they open in whatever reader you already use.</p>
-      </details>
-      <details class="qa">
-        <summary>Is this useful if I'm not a knowledge worker?</summary>
-        <p>Yes — the exercises are about attention and time, not about a specific job title. Students, freelancers, teachers and managers have all used it. The worksheets assume you control at least some part of your day.</p>
-      </details>
-      <details class="qa">
-        <summary>Do I get future editions free?</summary>
-        <p>Always. When the book is revised, you get the new files at the same email address, at no cost.</p>
-      </details>
-      <details class="qa">
-        <summary>What if it isn't for me?</summary>
-        <p>Email within 7 days and you get a full refund — no questions, no form to fill. You can keep the files.</p>
-      </details>
-      <details class="qa">
-        <summary>Can I print it or share it with my team?</summary>
-        <p>Printing a personal copy is fine. For a team, please use the Team pack — it covers up to ten people and includes the workshop agenda.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA / NEWSLETTER ================= -->
-<section class="section-pad" style="padding-top:20px">
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <div class="cta-band__grid">
-        <div>
-          <p class="eyebrow">Free chapter</p>
-          <h2>Read chapter one before you decide.</h2>
-          <p style="max-width:44ch;margin-bottom:0">
-            Get the first chapter plus the one-page attention audit in your inbox.
-            No drip sequence, no daily emails — just the file.
-          </p>
-        </div>
-        <div>
-          <form class="subscribe" id="subscribeForm" novalidate>
-            <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
-            <button class="btn btn--gold" type="submit">Send it</button>
-          </form>
-          <p class="form-msg" id="formMsg"></p>
-        </div>
+<!-- ================= SUPPORT ================= -->
+<section class="pad-sm" id="support">
+  <div class="wrap reveal">
+    <div class="features">
+      <div class="feature">
+        <h3 class="h4">Instant download</h3>
+        <p>Files arrive the second your payment clears. No waiting, no approval step.</p>
+      </div>
+      <div class="feature">
+        <h3 class="h4">Secure payment</h3>
+        <p>UPI, cards and netbanking. We never see or store your card details.</p>
+      </div>
+      <div class="feature">
+        <h3 class="h4">100% satisfaction</h3>
+        <p>Seven days to change your mind — a full refund, and you keep the files.</p>
       </div>
     </div>
   </div>
@@ -1251,596 +779,128 @@ footer{border-top:1px solid var(--border);padding:56px 0 34px;margin-top:20px;po
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer>
-  <div class="wrap">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <a class="brand" href="#top">
-          <span class="brand__mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#14100a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/>
-            </svg>
-          </span>
-          <span>The Calm Edge</span>
-        </a>
-        <p>An independent ebook about attention, focus and finishing the work that matters.</p>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__note">
+      More ways to read: <a href="store.html">shop all books</a>, or <a href="classic.html">visit the original site</a> for the interactive 3D edition and a free sample chapter.
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="store.html">All books</a></li>
+          <li><a href="store.html">Self-Help</a></li>
+          <li><a href="store.html">Fiction</a></li>
+          <li><a href="store.html">Exam prep</a></li>
+        </ul>
       </div>
       <div>
         <h4>The book</h4>
         <ul>
-          <li><a href="store.html">Browse the store</a></li>
-          <li><a href="#book">What's inside</a></li>
+          <li><a href="#book">Overview</a></li>
           <li><a href="#chapters">Chapters</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#" data-open-reader>Free chapter</a></li>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="classic.html">Free chapter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#support">How to download</a></li>
+          <li><a href="#support">Refund policy</a></li>
+          <li><a href="#support">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>About</h4>
         <ul>
-          <li><a href="#author">The author</a></li>
-          <li><a href="#reviews">Reader notes</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#top">Contact</a></li>
+          <li><a href="#highlights">The author</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="classic.html">Original site</a></li>
         </ul>
       </div>
       <div>
         <h4>Legal</h4>
         <ul>
-          <li><a href="#top">Terms of use</a></li>
-          <li><a href="#top">Privacy policy</a></li>
-          <li><a href="#top">Refund policy</a></li>
+          <li><a href="#support">Terms of use</a></li>
+          <li><a href="#support">Privacy</a></li>
+          <li><a href="#support">Refunds</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>&copy; <span id="year">2026</span> The Calm Edge. All rights reserved.</span>
-      <span>Made in India &middot; DRM-free &middot; Built to be edited</span>
+
+    <div class="footer__legal">
+      <span>Copyright © <span id="year">2026</span> Kitably. All rights reserved.</span>
+      <div class="footer__legal-links">
+        <a href="#support">Privacy Policy</a>
+        <span>|</span>
+        <a href="#support">Terms of Use</a>
+        <span>|</span>
+        <a href="#support">Sales &amp; Refunds</a>
+        <span>|</span>
+        <span>India</span>
+      </div>
     </div>
   </div>
 </footer>
 
-<!-- ================= READER MODAL ================= -->
-<div class="modal" id="readerModal" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
-  <div class="modal__panel">
-    <div class="modal__bar">
-      <div>
-        <b id="readerTitle">Chapter 1 — The attention audit</b>
-        <small>Free sample &middot; The Calm Edge</small>
-      </div>
-      <div class="modal__tools">
-        <button class="tool" id="fontDown" aria-label="Decrease text size">A-</button>
-        <button class="tool" id="fontUp" aria-label="Increase text size">A+</button>
-        <button class="modal__close" id="readerClose" aria-label="Close reader">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="modal__body" id="readerBody">
-      <div class="read-progress"><i id="readProgress"></i></div>
-      <article class="reader" id="readerText">
-        <span class="chapter-label">Chapter one</span>
-        <h2>The attention audit</h2>
-        <p>Before you change anything about how you work, you need to see it clearly. Not the version you describe in interviews — the version that actually happened last Tuesday. So this chapter asks for one thing: twenty minutes, a piece of paper, and an honest account of where your day went.</p>
-        <p>Most people guess wrong. Ask someone how much of their day is spent on focused work and they will say three or four hours. Ask them to log it for three days and the number is usually under ninety minutes, broken into fragments of eleven or twelve. The gap between the guess and the log is not a character flaw. It is simply what happens when a day is designed by other people's urgency.</p>
-        <blockquote>You cannot fix an attention problem you cannot see. The audit is not about judgement — it is about making the invisible visible.</blockquote>
-        <p>Here is the audit. Divide a page into columns for the hours you work. Every thirty minutes, write one word for what you were doing and one word for what you were supposed to be doing. That is all. No app, no timer, no categories to learn. At the end of three days, look for two patterns: the moments where intention and action matched, and the moments where they drifted.</p>
-        <p>The drift is where the information lives. Perhaps your best hour is being spent in a stand-up. Perhaps the two hours you block for writing are the two hours your team needs you most. Perhaps you are not short of time at all — you are short of uninterrupted time, which is a different problem with a different fix.</p>
-        <p>One warning. The first day of the audit usually feels terrible. You will notice how often you reach for your phone, how many times you re-read the same paragraph, how much of the day is reaction rather than choice. That discomfort is the point. It is also temporary. By the third day, most people find one or two genuinely good hours hiding in plain sight — hours that could be protected with a small change instead of a total life overhaul.</p>
-        <p>Write down that one change before you turn the page. Not five. One. The rest of this book works only if you start from something real.</p>
-        <div class="end">
-          <a class="btn btn--gold btn--sm" href="#pricing" id="readerBuy">Get the full book — ₹399</a>
-          <button class="btn btn--ghost btn--sm" id="readerClose2">Keep browsing</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</div>
-
-<div class="toast" id="toast"></div>
-
-<!-- ============================================================
-     SCRIPTS
-     ============================================================ -->
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
-  }
-}
-</script>
-
-<script type="module">
-/* ------------------------------------------------------------------
-   3D BOOK  —  Three.js, loaded from CDN.
-   If the CDN or WebGL is unavailable, a CSS 3D book is shown instead.
-   ------------------------------------------------------------------ */
-const stageCanvas = document.getElementById('book3d');
-const fallback = document.getElementById('bookFallback');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function showFallback(){
-  if (stageCanvas) stageCanvas.style.display = 'none';
-  if (fallback) fallback.classList.add('show');
-  const ctl = document.querySelector('.stage__controls');
-  if (ctl) ctl.style.display = 'none';
-}
-
-async function init3D(){
-  if (!stageCanvas) return;
-  let THREE;
-  try {
-    THREE = await import('three');
-  } catch (err) {
-    showFallback();
-    return;
-  }
-
-  let renderer;
-  try {
-    renderer = new THREE.WebGLRenderer({ canvas: stageCanvas, antialias: true, alpha: true });
-  } catch (err) {
-    showFallback();
-    return;
-  }
-
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
-  camera.position.set(0, 0.15, 9.4);
-
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.shadowMap.enabled = false;
-
-  /* ---------- cover artwork drawn on a canvas (no image files needed) ---------- */
-  function makeCoverTexture(){
-    const c = document.createElement('canvas');
-    c.width = 1024; c.height = 1420;
-    const g = c.getContext('2d');
-
-    // base
-    const grad = g.createLinearGradient(0, 0, 900, 1420);
-    grad.addColorStop(0, '#192634');
-    grad.addColorStop(.55, '#101a24');
-    grad.addColorStop(1, '#0b131c');
-    g.fillStyle = grad; g.fillRect(0, 0, 1024, 1420);
-
-    // warm glow top-right
-    const glow = g.createRadialGradient(840, 180, 20, 840, 180, 700);
-    glow.addColorStop(0, 'rgba(217,164,65,.30)');
-    glow.addColorStop(1, 'rgba(217,164,65,0)');
-    g.fillStyle = glow; g.fillRect(0, 0, 1024, 1420);
-
-    // thin gold frame
-    g.strokeStyle = 'rgba(217,164,65,.55)'; g.lineWidth = 2;
-    g.strokeRect(58, 58, 908, 1304);
-
-    // top label
-    g.fillStyle = 'rgba(240,205,133,.9)';
-    g.font = '500 22px "JetBrains Mono", monospace';
-    g.textAlign = 'center';
-    g.letterSpacing = '6px';
-    g.fillText('A  P R A C T I C A L   G U I D E', 512, 168);
-
-    // concentric motif
-    g.strokeStyle = 'rgba(217,164,65,.22)'; g.lineWidth = 1.4;
-    for (let i = 1; i <= 4; i++){
-      g.beginPath(); g.arc(512, 470, 66 + i * 34, 0, Math.PI * 2); g.stroke();
-    }
-    g.fillStyle = 'rgba(217,164,65,.9)';
-    g.beginPath(); g.arc(512, 470, 8, 0, Math.PI * 2); g.fill();
-
-    // title
-    g.textAlign = 'center';
-    g.fillStyle = '#f6f1e6';
-    g.font = '400 132px Georgia, "Times New Roman", serif';
-    g.fillText('THE', 512, 780);
-    g.fillText('CALM', 512, 906);
-    g.fillStyle = '#e8c583';
-    g.font = 'italic 400 132px Georgia, "Times New Roman", serif';
-    g.fillText('Edge', 512, 1032);
-
-    // rule
-    g.strokeStyle = 'rgba(217,164,65,.6)'; g.lineWidth = 2;
-    g.beginPath(); g.moveTo(392, 1092); g.lineTo(632, 1092); g.stroke();
-
-    // subtitle + author
-    g.fillStyle = 'rgba(214,226,236,.72)';
-    g.font = '400 26px Georgia, serif';
-    g.fillText('deep work in a noisy world', 512, 1148);
-
-    g.fillStyle = 'rgba(240,205,133,.95)';
-    g.font = '500 25px "JetBrains Mono", monospace';
-    g.letterSpacing = '4px';
-    g.fillText('D E V I K A   M E H T A', 512, 1290);
-
-    const tex = new THREE.CanvasTexture(c);
-    tex.anisotropy = 4;
-    tex.colorSpace = THREE.SRGBColorSpace;
-    return tex;
-  }
-
-  /* ---------- book geometry ---------- */
-  const W = 2.62, H = 3.62, COVER_T = 0.07, PAGES_D = 0.34;
-  const group = new THREE.Group();
-
-  const coverMat = new THREE.MeshStandardMaterial({
-    map: makeCoverTexture(), roughness: .62, metalness: .12
-  });
-  const backMat = new THREE.MeshStandardMaterial({ color: 0x101a24, roughness: .75, metalness: .1 });
-  const pageMat = new THREE.MeshStandardMaterial({ color: 0xf1e8d6, roughness: .95, metalness: 0 });
-  const spineMat = new THREE.MeshStandardMaterial({ color: 0x121c26, roughness: .55, metalness: .25 });
-
-  const front = new THREE.Mesh(new THREE.BoxGeometry(W, H, COVER_T), coverMat);
-  front.position.z = PAGES_D / 2 + COVER_T / 2;
-  group.add(front);
-
-  const back = new THREE.Mesh(new THREE.BoxGeometry(W, H, COVER_T), backMat);
-  back.position.z = -(PAGES_D / 2 + COVER_T / 2);
-  group.add(back);
-
-  const pages = new THREE.Mesh(new THREE.BoxGeometry(W - 0.12, H - 0.14, PAGES_D), pageMat);
-  group.add(pages);
-
-  const spine = new THREE.Mesh(new THREE.BoxGeometry(COVER_T, H, PAGES_D + COVER_T * 2), spineMat);
-  spine.position.x = -(W / 2) + COVER_T / 2;
-  group.add(spine);
-
-  // gold foil strip on the spine
-  const foil = new THREE.Mesh(
-    new THREE.BoxGeometry(COVER_T + 0.004, 0.05, PAGES_D + COVER_T * 2),
-    new THREE.MeshStandardMaterial({ color: 0xd9a441, roughness: .35, metalness: .8 })
-  );
-  foil.position.set(-(W / 2) + COVER_T / 2, H / 2 - 0.5, 0);
-  group.add(foil);
-
-  group.rotation.set(0.06, -0.55, 0.02);
-  scene.add(group);
-
-  /* ---------- lights ---------- */
-  scene.add(new THREE.AmbientLight(0xffffff, 0.75));
-
-  const key = new THREE.DirectionalLight(0xfff3e0, 1.95);
-  key.position.set(4, 5.5, 6);
-  scene.add(key);
-
-  const gold = new THREE.PointLight(0xd9a441, 15, 20);
-  gold.position.set(-4.5, 1.2, 3.4);
-  scene.add(gold);
-
-  const cool = new THREE.PointLight(0x6fae9b, 16, 24);
-  cool.position.set(4.6, -2.4, 2.2);
-  scene.add(cool);
-
-  const rim = new THREE.DirectionalLight(0xffffff, 0.7);
-  rim.position.set(-2, -3, -5);
-  scene.add(rim);
-
-  /* ---------- dust particles ---------- */
-  const COUNT = 220;
-  const pos = new Float32Array(COUNT * 3);
-  for (let i = 0; i < COUNT; i++){
-    pos[i * 3]     = (Math.random() - 0.5) * 11;
-    pos[i * 3 + 1] = (Math.random() - 0.5) * 9;
-    pos[i * 3 + 2] = (Math.random() - 0.5) * 6 - 1;
-  }
-  const dustGeo = new THREE.BufferGeometry();
-  dustGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({
-    color: 0xe8c583, size: 0.035, transparent: true, opacity: .5, depthWrite: false
-  }));
-  scene.add(dust);
-
-  /* ---------- interaction ---------- */
-  let targetY = -0.55, targetX = 0.06;
-  let curY = targetY, curX = targetX;
-  let dragging = false, lastX = 0, lastY = 0, idle = 0;
-
-  /* ---------- zoom: scroll wheel, pinch, +/− buttons ---------- */
-  const ZOOM_MIN = 0.68, ZOOM_MAX = 1.85;
-  let targetZoom = 1, curZoom = 1;
-  function setZoom(z){ targetZoom = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, z)); }
-  function resetView(){ targetZoom = 1; targetY = -0.55; targetX = 0.06; }
-
-  function onDown(e){
-    dragging = true; idle = 0;
-    stageCanvas.classList.add('dragging');
-    const p = e.touches ? e.touches[0] : e;
-    lastX = p.clientX; lastY = p.clientY;
-  }
-  function onMove(e){
-    if (!dragging) return;
-    if (e.touches && e.touches.length > 1) return;   // two fingers = pinch, not rotate
-    const p = e.touches ? e.touches[0] : e;
-    const dx = p.clientX - lastX, dy = p.clientY - lastY;
-    lastX = p.clientX; lastY = p.clientY;
-    targetY += dx * 0.008;
-    targetX = Math.max(-0.6, Math.min(0.6, targetX + dy * 0.005));
-    idle = 0;
-  }
-  function onUp(){
-    dragging = false; idle = 0;
-    stageCanvas.classList.remove('dragging');
-  }
-
-  stageCanvas.addEventListener('mousedown', onDown);
-  window.addEventListener('mousemove', onMove);
-  window.addEventListener('mouseup', onUp);
-  stageCanvas.addEventListener('touchstart', onDown, { passive: true });
-  window.addEventListener('touchmove', onMove, { passive: true });
-  window.addEventListener('touchend', onUp);
-
-  /* mouse wheel / trackpad scroll over the book = zoom.
-     At the zoom limits we stop capturing, so the page scrolls normally. */
-  stageCanvas.addEventListener('wheel', (e) => {
-    if (!e.deltaY) return;
-    const next = targetZoom * (e.deltaY > 0 ? 0.93 : 1.075);
-    if (next < ZOOM_MIN - 0.002 || next > ZOOM_MAX + 0.002) return;
-    e.preventDefault();
-    setZoom(next);
-    idle = 0;
-  }, { passive: false });
-
-  /* pinch to zoom on touch screens */
-  const touchDist = (t) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
-  let pinchStart = 0, pinchBase = 1;
-  stageCanvas.addEventListener('touchstart', (e) => {
-    if (e.touches.length === 2){ pinchStart = touchDist(e.touches); pinchBase = targetZoom; }
-  }, { passive: true });
-  stageCanvas.addEventListener('touchmove', (e) => {
-    if (e.touches.length === 2 && pinchStart){
-      e.preventDefault();
-      setZoom(pinchBase * (touchDist(e.touches) / pinchStart));
-    }
-  }, { passive: false });
-  stageCanvas.addEventListener('touchend', () => { pinchStart = 0; }, { passive: true });
-
-  /* on-screen controls + double click to reset */
-  const bind = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener('click', fn); };
-  bind('zoomIn', () => setZoom(targetZoom * 1.14));
-  bind('zoomOut', () => setZoom(targetZoom / 1.14));
-  bind('zoomReset', resetView);
-  stageCanvas.addEventListener('dblclick', resetView);
-
-  // subtle tilt following the cursor when not dragging
-  let pointerX = 0, pointerY = 0;
-  window.addEventListener('pointermove', (e) => {
-    const r = stageCanvas.getBoundingClientRect();
-    pointerX = ((e.clientX - r.left) / r.width - 0.5) * 2;
-    pointerY = ((e.clientY - r.top) / r.height - 0.5) * 2;
-  });
-
-  /* ---------- resize ---------- */
-  function resize(){
-    const r = stageCanvas.getBoundingClientRect();
-    const w = Math.max(1, r.width), h = Math.max(1, r.height);
-    renderer.setSize(w, h, false);
-    camera.aspect = w / h;
-    camera.fov = w < 520 ? 44 : 34;
-    camera.updateProjectionMatrix();
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  /* ---------- loop ---------- */
-  let t = 0;
-  function animate(){
-    requestAnimationFrame(animate);
-    t += 0.008;
-    if (!reduceMotion){
-      if (!dragging){
-        idle += 1;
-        if (idle > 40) targetY += 0.0035;             // gentle auto-rotate
-      }
-      targetX += (pointerY * 0.12 - targetX) * 0.02;
-      targetY += pointerX * 0.0018;
-      curY += (targetY - curY) * 0.08;
-      curX += (targetX - curX) * 0.08;
-      group.rotation.y = curY;
-      group.rotation.x = curX;
-      group.position.y = Math.sin(t) * 0.09;
-      curZoom += (targetZoom - curZoom) * 0.12;
-      group.scale.setScalar(curZoom);
-      dust.rotation.y = t * 0.06;
-      dust.rotation.x = Math.sin(t * 0.4) * 0.05;
-    }
-    renderer.render(scene, camera);
-  }
-  animate();
-}
-
-init3D();
-</script>
-
 <script>
-/* ==================================================================
-   UI BEHAVIOUR  (plain JS — edit freely)
-   ================================================================== */
-(function(){
-  const $  = (s, r) => (r || document).querySelector(s);
-  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
 
-  /* ---- year ---- */
-  $('#year').textContent = new Date().getFullYear();
+  /* year */
+  var y = $("#year");
+  if (y) y.textContent = new Date().getFullYear();
 
-  /* ---- sticky nav + scroll progress ---- */
-  const nav = $('#nav');
-  const bar = $('#progressBar');
-  function onScroll(){
-    const y = window.scrollY;
-    nav.classList.toggle('scrolled', y > 24);
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* ---- theme toggle (remembers choice) ---- */
-  const root = document.documentElement;
-  const saved = localStorage.getItem('tce-theme');
-  if (saved) root.setAttribute('data-theme', saved);
-  $('#themeToggle').addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('tce-theme', next);
-  });
-
-  /* ---- scroll reveal ---- */
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(en => {
-      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+  /* mobile menu */
+  var menu = $("#menu"), btn = $("#menuBtn");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.style.overflow = open ? "hidden" : "";
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px' });
-  $$('.reveal').forEach(el => io.observe(el));
-
-  /* ---- toast ---- */
-  const toast = $('#toast');
-  let toastTimer;
-  function showToast(msg){
-    toast.textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 3800);
-  }
-  window.showToast = showToast;
-
-  /* ---- reader modal ---- */
-  const modal = $('#readerModal');
-  const body = $('#readerBody');
-  const textEl = $('#readerText');
-  const prog = $('#readProgress');
-  let fontSize = 1.16;
-
-  function openReader(){
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    body.scrollTop = 0;
-    prog.style.width = '0%';
-    setTimeout(() => $('#readerClose').focus(), 120);
-  }
-  function closeReader(){
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  $$('[data-open-reader]').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); openReader(); }));
-  $('#readerClose').addEventListener('click', closeReader);
-  $('#readerClose2').addEventListener('click', closeReader);
-  $('#readerBuy').addEventListener('click', closeReader);
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeReader(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeReader(); });
-
-  body.addEventListener('scroll', () => {
-    const max = body.scrollHeight - body.clientHeight;
-    prog.style.width = (max > 0 ? (body.scrollTop / max) * 100 : 0) + '%';
-  });
-
-  $('#fontUp').addEventListener('click', () => {
-    fontSize = Math.min(1.6, fontSize + 0.08);
-    textEl.style.fontSize = fontSize + 'rem';
-  });
-  $('#fontDown').addEventListener('click', () => {
-    fontSize = Math.max(0.95, fontSize - 0.08);
-    textEl.style.fontSize = fontSize + 'rem';
-  });
-
-  /* ---- buy buttons (demo checkout) ---- */
-  $$('[data-buy]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const plan = btn.getAttribute('data-buy');
-      showToast(plan + ' — checkout not connected yet. See README › "Connect payments".');
-    });
-  });
-
-  /* ---- newsletter form (demo) ---- */
-  const form = $('#subscribeForm');
-  const msg = $('#formMsg');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = form.querySelector('input[type="email"]').value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
-      msg.style.color = '#d9534f';
-      msg.textContent = 'Please enter a valid email address.';
-      return;
-    }
-    msg.style.color = '';
-    msg.textContent = 'Thanks! In the live site this sends the free chapter automatically.';
-    form.reset();
-  });
-
-  /* ---- mobile menu: jump links work, burger scrolls to pricing ---- */
-  $('#burger').addEventListener('click', () => {
-    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
-  });
-
-  /* ---- library: live search + category filters ---- */
-  const shelf = document.getElementById('shelf');
-  if (shelf){
-    const cards  = $$('.book-card', shelf);
-    const input  = document.getElementById('bookSearch');
-    const kbd    = document.getElementById('searchKbd');
-    const clearB = document.getElementById('searchClear');
-    const count  = document.getElementById('shelfCount');
-    const empty  = document.getElementById('shelfEmpty');
-    const chips  = $$('.chip');
-    let cat = 'all';
-
-    function applyFilter(){
-      const q = (input.value || '').trim().toLowerCase();
-      let shown = 0;
-      cards.forEach(card => {
-        const hay = (card.getAttribute('data-search') || '').toLowerCase();
-        const okCat = cat === 'all' || card.getAttribute('data-cat') === cat;
-        const okQ = !q || hay.indexOf(q) > -1;
-        const show = okCat && okQ;
-        card.classList.toggle('is-hidden', !show);
-        if (show) shown++;
+    Array.prototype.forEach.call(menu.querySelectorAll("a"), function (a) {
+      a.addEventListener("click", function () {
+        menu.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
       });
-      count.textContent = shown + (shown === 1 ? ' title' : ' titles');
-      empty.hidden = shown !== 0;
-      clearB.style.display = q ? 'grid' : 'none';
-      kbd.style.display = q ? 'none' : 'block';
-    }
-
-    input.addEventListener('input', applyFilter);
-    clearB.addEventListener('click', () => { input.value = ''; applyFilter(); input.focus(); });
-    chips.forEach(c => c.addEventListener('click', () => {
-      chips.forEach(x => x.classList.remove('is-active'));
-      c.classList.add('is-active');
-      cat = c.getAttribute('data-cat');
-      applyFilter();
-    }));
-
-    /* press / anywhere on the page to jump into the search box */
-    document.addEventListener('keydown', (e) => {
-      const tag = (document.activeElement.tagName || '').toLowerCase();
-      if (e.key === '/' && tag !== 'input' && tag !== 'textarea'){
-        e.preventDefault();
-        document.getElementById('library').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setTimeout(() => input.focus(), 420);
-      }
     });
-
-    /* the small book covers under the 3D model pre-fill the search */
-    $$('[data-jump]').forEach(b => b.addEventListener('click', () => {
-      input.value = b.getAttribute('data-jump');
-      cat = 'all';
-      chips.forEach(x => x.classList.toggle('is-active', x.getAttribute('data-cat') === 'all'));
-      applyFilter();
-      document.getElementById('library').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }));
-
-    applyFilter();
   }
 
-  /* ---- smooth anchor offset for fixed nav ---- */
-  $$('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href');
-      if (id.length < 2) return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 74;
-      window.scrollTo({ top, behavior: 'smooth' });
+  /* bag count from the store (localStorage) */
+  var bag = $("#bagCount");
+  try {
+    var cart = JSON.parse(localStorage.getItem("kitably-cart") || "[]");
+    var n = cart.reduce(function (t, i) { return t + (i.qty || 0); }, 0);
+    if (n > 0 && bag) { bag.textContent = n; bag.hidden = false; }
+  } catch (e) {}
+
+  /* search opens the store's search */
+  var sBtn = $("#searchOpen");
+  if (sBtn) sBtn.addEventListener("click", function () { window.location.href = "store.html"; });
+
+  /* scroll reveal */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { io.observe(el); });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { el.classList.add("in"); });
+  }
+
+  /* local nav active state */
+  var links = document.querySelectorAll(".local-nav__links a[href^='#']");
+  Array.prototype.forEach.call(links, function (a) {
+    a.addEventListener("click", function () {
+      Array.prototype.forEach.call(links, function (x) { x.classList.remove("is-active"); });
+      a.classList.add("is-active");
     });
   });
 })();
