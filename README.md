@@ -41,8 +41,60 @@ nahi hai. Phone se aise karo:
 
 ---
 
-Ek ready-to-publish ebook website. Single file, koi build step nahi, koi framework nahi.
-Bas file kholo, edit karo, internet par daal do.
+## 0b. Aapki site par ab DO pages hain
+
+| Page | Kya hai | URL |
+|---|---|---|
+| `index.html` | Single-book landing page (3D book, sample chapter reader) | https://hqiabsi.github.io/calm-edge-ebook/ |
+| `store.html` | **Poora eCommerce store** — 13 books, search, filters, cart, quick preview | https://hqiabsi.github.io/calm-edge-ebook/store.html |
+
+Dono ek doosre se linked hain (landing page ke nav mein "Store", store ke logo se landing).
+
+### Store page mein kya-kya chalta hai
+
+- Header: search bar + category dropdown, login/signup, wishlist, cart badge
+- Hero: "featured book of the month" + Festive Sale banner + Get 50% Off coupon
+- Categories grid (8 categories, live counts)
+- Product grid: cover, badge, title, author, rating, price + MRP + % off, Preview + Add to cart
+- Filters: max price, language (Hindi/English), format (PDF/EPUB), rating, author
+- Sort: popularity, price low↔high, rating, newest
+- Cart drawer: quantity +/−, remove, coupon code (`FESTIVE` 50%, `READ70` 20%, `FIRST10` 10%), total
+- Quick preview modal, wishlist (dil ka icon), dark/light toggle
+- Trust strip, newsletter, footer
+- Cart aur wishlist browser mein save rehte hain (localStorage)
+
+### Store edit kaise kare
+
+**Books badalne ke liye:** `store.html` kholo → Ctrl+F se search karo `const BOOKS` → har book ek block hai:
+
+```js
+{ id: 1, title: "The Calm Edge", author: "Devika Mehta", cat: "Self-Help",
+  lang: "English", format: "PDF + EPUB", rating: 4.8, reviews: 1240,
+  price: 399, mrp: 699, pages: 214, tags: ["Bestseller"],
+  c1: "#1d2d3c", c2: "#0b131b", acc: "#e8c583", blurb: "..." }
+```
+
+- `price` / `mrp` — sirf number (₹ aur comma nahi)
+- `cat` — Fiction, Non-Fiction, Self-Help, Sci-Fi, Competitive Exams, Business, Romance, Children
+- `format` — "PDF", "EPUB" ya "PDF + EPUB"
+- `tags` — `["Bestseller"]`, `["New"]`, `["Editor's pick"]` ya khali `[]`
+- `c1`, `c2`, `acc` — cover ka gradient aur accent colour
+- Naya book add karne ke liye koi ek block copy karke `id` badal do
+
+**Coupon badalne ke liye:** `const COUPONS = { FESTIVE: 0.5, ... }` — 0.5 matlab 50% off.
+
+**⚠️ Zaroori:** styling `store.css` mein hai jo **Tailwind se compile** hoti hai. Sirf text, price
+ya book data badalne ho to koi rebuild nahi chahiye. Lekin naye *design classes* add karo (naya
+button style, naya layout) to CSS dobara build karni padti hai — phone se ye nahi hoga, mujhe bol
+dena main rebuild karke push kar dunga.
+
+**Checkout:** abhi demo hai (button toast dikhata hai). Razorpay/Gumroad ka payment link milne par
+`#checkoutBtn` wale code mein `window.location.href = "aapka-link"` laga dena — ya mujhe bol dena.
+
+---
+
+Ek ready-to-publish ebook website. Landing page single file hai; store page Tailwind-compiled CSS
+(`store.css`) use karta hai. Koi framework, koi server nahi chahiye.
 
 ---
 
