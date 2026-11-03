@@ -6,7 +6,6 @@
 <title>Kitably — The Calm Edge. Do your best work in a noisy world.</title>
 <meta name="description" content="The Calm Edge is a 214-page field guide to deep work. Read it on any device, own it for life. Instant PDF + EPUB download.">
 <meta name="theme-color" content="#ffffff">
-<meta name="google-site-verification" content="CoJgRb6mZXXpcEi8G2Y-obVzRhPmQuRoeGcbHNEiuJ0" />
 <meta property="og:title" content="The Calm Edge — Kitably">
 <meta property="og:description" content="Do your best work in a noisy world. 214 pages, 12 chapters, instant PDF + EPUB.">
 <meta property="og:type" content="website">
@@ -28,6 +27,11 @@ window.SITE = {
 
   /* PDF ka link (Google Drive / Gumroad file). download.html isse use karta hai. */
   pdfLink: "",
+
+  /* UPI se seedha paisa lena ho to ye do line bharo.
+     paymentLink khali ho aur upiId bhara ho to "Buy" par UPI panel khulega. */
+  upiId:   "",                    /* jaise "harsh@okhdfcbank" */
+  upiName: "Harsh Gupta",         /* jis naam par UPI hai */
 
   /* WhatsApp number with country code, jaise "919876543210". Khali = button nahi. */
   whatsapp: ""
@@ -393,6 +397,39 @@ section{position:relative}
    ============================================================ */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   9b. UPI PAYMENT PANEL
+   ============================================================ */
+.pay-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:18px}
+.pay-modal.open{display:flex}
+.pay-modal__scrim{position:absolute;inset:0;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pay-modal__panel{
+  position:relative;width:100%;max-width:420px;background:#fff;border-radius:24px;
+  padding:30px 26px 26px;text-align:center;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);
+  animation:payIn .28s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes payIn{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.pay-modal__close{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;background:#f5f5f7;color:#6e6e73;display:grid;place-items:center;font-size:14px;transition:background .2s}
+.pay-modal__close:hover{background:#e8e8ed;color:#1d1d1f}
+.pay-eyebrow{font-size:13px;font-weight:600;color:#bf4800;margin-bottom:6px}
+.pay-title{font-size:22px;font-weight:600;letter-spacing:-.02em;margin-bottom:2px}
+.pay-amount{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:10px 0 20px}
+.pay-amount b{font-size:34px;font-weight:600;letter-spacing:-.03em}
+.pay-amount s{font-size:16px;color:#86868b}
+.pay-upi{display:flex;align-items:center;gap:10px;justify-content:center;background:#f5f5f7;border-radius:14px;padding:12px 14px;margin-bottom:16px}
+.pay-upi__label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#86868b}
+.pay-upi code{font-size:14.5px;font-weight:600;letter-spacing:-.01em;word-break:break-all}
+.pay-copy{font-size:12px;font-weight:600;color:#0071e3;padding:4px 8px;border-radius:8px}
+.pay-copy:hover{background:rgba(0,113,227,.08)}
+.pay-btn{width:100%;margin-bottom:10px}
+.pay-hint{font-size:13.5px;color:#6e6e73;line-height:1.5;margin-bottom:16px}
+.pay-note{font-size:11.5px;color:#86868b;margin-top:6px}
+.pay-empty{background:#fff8e6;border:1px solid #f0d9a5;border-radius:12px;padding:12px;font-size:12.5px;color:#6b4e12;text-align:left;line-height:1.5;margin-bottom:14px}
+@media(max-width:600px){
+  .pay-modal__panel{border-radius:20px;padding:26px 20px 22px}
+  .pay-title{font-size:20px}
+}
 
 /* ============================================================
    10. RESPONSIVE
@@ -823,6 +860,32 @@ section{position:relative}
 </main>
 
 <!-- ================= FOOTER ================= -->
+<!-- ================= UPI PAYMENT PANEL ================= -->
+<div class="pay-modal" id="payModal" aria-hidden="true">
+  <div class="pay-modal__scrim" data-close-pay></div>
+  <div class="pay-modal__panel" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+    <button class="pay-modal__close" data-close-pay aria-label="Close">✕</button>
+    <p class="pay-eyebrow">Pay by UPI</p>
+    <h3 class="pay-title" id="payTitle" data-title>The Calm Edge</h3>
+    <div class="pay-amount"><b data-price>₹399</b><s data-mrp>₹699</s></div>
+
+    <div class="pay-empty" id="payEmpty" hidden>
+      Owner ke liye: <code>index.html</code> ke SITE block mein <code>upiId</code> aur <code>whatsapp</code> bhar do — ye panel turant kaam karega.
+    </div>
+
+    <div class="pay-upi" id="payUpiBox">
+      <span class="pay-upi__label">UPI ID</span>
+      <code id="payUpiId">—</code>
+      <button class="pay-copy" id="copyUpi">Copy</button>
+    </div>
+
+    <a class="btn pay-btn" id="upiAppBtn" href="#">Open UPI app</a>
+    <p class="pay-hint">UPI app se <b data-price>₹399</b> bhejo, phir payment ka screenshot WhatsApp par bhej do — main turant download link bhej dunga.</p>
+    <a class="btn btn--ghost pay-btn" id="waBtn" href="#">Send screenshot on WhatsApp</a>
+    <p class="pay-note">Screenshot ke bina bhi bhej sakte ho — UPI reference number likh dena.</p>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__note">
@@ -964,6 +1027,53 @@ section{position:relative}
     all("[data-save]").forEach(function (el) { el.textContent = "Save " + save + "%"; });
   }
   if (S.paymentLink) all("[data-buy]").forEach(function (el) { el.setAttribute("href", S.paymentLink); });
+
+  /* ---------- UPI panel ---------- */
+  var modal = document.getElementById("payModal");
+  if (!modal) return;
+
+  function upiLink() {
+    var amt = S.price || 0;
+    var note = encodeURIComponent((S.title || "eBook") + " - eBook");
+    return "upi://pay?pa=" + encodeURIComponent(S.upiId || "") +
+           "&pn=" + encodeURIComponent(S.upiName || "") +
+           "&am=" + amt + "&cu=INR&tn=" + note;
+  }
+  function waLink() {
+    var msg = "Hi, maine " + (S.title || "ebook") + " ke liye ₹" + (S.price || "") +
+              " UPI se pay kar diya hai. Screenshot bhej raha hoon.";
+    return "https://wa.me/" + (S.whatsapp || "").replace(/[^0-9]/g, "") + "?text=" + encodeURIComponent(msg);
+  }
+
+  function openPay(e) {
+    if (e) e.preventDefault();
+    if (S.paymentLink) { window.location.href = S.paymentLink; return; }
+    document.getElementById("payUpiId").textContent = S.upiId || "—";
+    document.getElementById("upiAppBtn").setAttribute("href", S.upiId ? upiLink() : "#");
+    document.getElementById("waBtn").setAttribute("href", S.whatsapp ? waLink() : "#");
+    document.getElementById("payEmpty").hidden = !!(S.upiId && S.whatsapp);
+    document.getElementById("payUpiBox").style.display = S.upiId ? "" : "none";
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+  function closePay() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  all("[data-buy]").forEach(function (el) { el.addEventListener("click", openPay); });
+  all("[data-close-pay]").forEach(function (el) { el.addEventListener("click", closePay); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePay(); });
+
+  var copyBtn = document.getElementById("copyUpi");
+  if (copyBtn) copyBtn.addEventListener("click", function () {
+    if (!S.upiId) return;
+    if (navigator.clipboard) navigator.clipboard.writeText(S.upiId);
+    copyBtn.textContent = "Copied";
+    setTimeout(function () { copyBtn.textContent = "Copy"; }, 1600);
+  });
 })();
 </script>
 </body>
