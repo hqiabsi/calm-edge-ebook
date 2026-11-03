@@ -201,6 +201,31 @@ check kar sakte ho.
 
 ---
 
+## 0d. Free library aur "kaunsi file daal sakte hain"
+
+Naya page: **`library.html`** — free study material, Apple-style. Har card ke do hi tarah hote hain:
+
+- **`url`** — bahar ka official link (hum file host nahi karte). Jaise NCERT, ePathshala, DIKSHA.
+- **`file`** — apni file jo repo mein padi hai, jaise `files/mere-notes.pdf`. Isi par "Our file · Free" pill aata hai.
+- **`paid: true`** — card par "Paid" pill aur link `index.html#buy` par chala jayega.
+
+Naya card add karna: `library.html` mein `var LIBRARY = [...]` copy karke badal do.
+
+### Copyright — ye rule kabhi na todo
+
+| File | Host kar sakte hain? |
+|---|---|
+| Aapne khud likhi / banayi | **Haan** — free ya paid, dono |
+| Aapke paas likhit licence/distribution agreement hai | Haan (agreement ki copy sambhal ke rakho) |
+| YCT / Arihant / Lucent / kisi bhi publisher ki book | **Nahi** — na free, na paid |
+| NCERT textbooks | **Nahi** — NCERT khud kehta hai koi doosri website host nahi kar sakti; sirf link de sakte hain |
+| Public domain / openly licensed (CC) | Haan, licence mention kar do |
+
+Isliye jo bhi PDF aap bhejoge, main pehle andar ka copyright page / publisher ka naam check karunga.
+Apni file ho to usi din paid ya free — jo aap kaho — site par lag jayegi.
+
+---
+
 ## 1. Folder mein kya hai
 
 | File | Kaam |
