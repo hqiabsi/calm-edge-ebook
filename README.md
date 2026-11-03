@@ -201,28 +201,40 @@ check kar sakte ho.
 
 ---
 
-## 0d. Free library aur "kaunsi file daal sakte hain"
+## 0d. Free library (27 verified public-domain books)
 
-Naya page: **`library.html`** — free study material, Apple-style. Har card ke do hi tarah hote hain:
+**`library.html`** — free library, ab asli catalog ke saath:
 
-- **`url`** — bahar ka official link (hum file host nahi karte). Jaise NCERT, ePathshala, DIKSHA.
-- **`file`** — apni file jo repo mein padi hai, jaise `files/mere-notes.pdf`. Isi par "Our file · Free" pill aata hai.
-- **`paid: true`** — card par "Paid" pill aur link `index.html#buy` par chala jayega.
+- **27 books** — 7 Hindi (Premchand ke 4 upanyas, Kabir Bijak, Tulsidas Vinaya Patrika, stories) + 20 English classics (Austen, Dickens, Tolstoy, Wilde, Kafka...)
+- **Search** — Hindi aur romanised dono: "गोदान" aur "godan" dono se milega, "premchand" se 5 books
+- **Filters** — हिन्दी / English / उपन्यास / कविता / Novel / Philosophy
+- **Direct download** — PDF aur EPUB button seedha file kholte hain (Archive.org / Gutenberg)
+- Neeche **6 badi collections** ke links: Gutenberg (79k), Archive Hindi, Wikisource, DOAB (1.08 lakh), OpenStax, NCERT
 
-Naya card add karna: `library.html` mein `var LIBRARY = [...]` copy karke badal do.
+### Naya book add karna
 
-### Copyright — ye rule kabhi na todo
+`library.html` mein `var BOOKS = [...]` array hai — ek object copy karke badal do:
 
-| File | Host kar sakte hain? |
+```js
+{"t":"गोदान (Godan)","a":"प्रेमचंद","lang":"hi","cat":"उपन्यास","year":"1936",
+ "src":"archive","id":"godan_premchand",
+ "pdf":"godan_premchand.pdf","epub":"godan_premchand.epub",
+ "kw":"premchand godan hindi novel"}
+```
+
+- `src` — `"archive"` (Internet Archive) ya `"gutenberg"` (Project Gutenberg)
+- `id` — archive.org ka identifier, ya Gutenberg ka ebook number
+- `pdf` / `epub` — archive.org wali exact file name (details page ke "Download options" mein milega)
+- `kw` — romanised keywords, warna English spelling se Hindi book nahi milegi
+
+### Kaunsi book daal sakte hain (yaad rakhna)
+
+| File | Daal sakte hain? |
 |---|---|
-| Aapne khud likhi / banayi | **Haan** — free ya paid, dono |
-| Aapke paas likhit licence/distribution agreement hai | Haan (agreement ki copy sambhal ke rakho) |
-| YCT / Arihant / Lucent / kisi bhi publisher ki book | **Nahi** — na free, na paid |
-| NCERT textbooks | **Nahi** — NCERT khud kehta hai koi doosri website host nahi kar sakti; sirf link de sakte hain |
-| Public domain / openly licensed (CC) | Haan, licence mention kar do |
-
-Isliye jo bhi PDF aap bhejoge, main pehle andar ka copyright page / publisher ka naam check karunga.
-Apni file ho to usi din paid ya free — jo aap kaho — site par lag jayegi.
+| Public domain — lekhak ka nidhan 1 Jan 1966 se pehle (India) | **Haan** — host ya link, dono |
+| Project Gutenberg / DOAB / OpenStax / CC licence | **Haan** |
+| YCT, Ghatna Chakra, Drishti, Arihant, Lucent (copyright zinda) | **Nahi** |
+| NCERT textbooks | Host nahi — sirf official link |
 
 ---
 
