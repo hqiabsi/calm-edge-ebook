@@ -10,6 +10,49 @@
 <meta property="og:description" content="Do your best work in a noisy world. 214 pages, 12 chapters, instant PDF + EPUB.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hqiabsi.github.io/calm-edge-ebook/">
+<script>
+/* ============================================================
+   ⚙️  SIRF YAHI BADLO  —  book ki details, payment aur PDF link
+   ============================================================ */
+window.SITE = {
+  title:  "The Calm Edge",        /* book ka naam */
+  author: "Devika Mehta",         /* author ka naam */
+  price:  399,                    /* bikri ka daam (sirf number) */
+  mrp:    699,                    /* kata hua daam (MRP) */
+  currency: "₹",
+
+  /* Payment page ka link — Razorpay / Gumroad / Instamojo.
+     Khali chhodo to "Buy" button store page par le jayega. */
+  paymentLink: "",
+
+  /* PDF ka link (Google Drive / Gumroad file). download.html isse use karta hai. */
+  pdfLink: "",
+
+  /* WhatsApp number with country code, jaise "919876543210". Khali = button nahi. */
+  whatsapp: ""
+};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Calm Edge",
+  "author": { "@type": "Person", "name": "Devika Mehta" },
+  "bookFormat": "https://schema.org/EBook",
+  "numberOfPages": 214,
+  "inLanguage": "en",
+  "description": "A practical field guide to deep work, attention and finishing what matters.",
+  "offers": {
+    "@type": "Offer",
+    "price": "399",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://hqiabsi.github.io/calm-edge-ebook/store.html"
+  }
+}
+</script>
+
 <link rel="canonical" href="https://hqiabsi.github.io/calm-edge-ebook/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231d1d1f'/%3E%3Cpath d='M6.5 6.2A1.6 1.6 0 0 1 8.1 4.6H18v11.2H8.1a1.6 1.6 0 0 0-1.6 1.6z' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
@@ -432,11 +475,11 @@ section{position:relative}
   <div class="hero__glow"></div>
   <div class="wrap hero__inner">
     <p class="hero__eyebrow">New edition</p>
-    <h1 class="h1">The Calm Edge</h1>
+    <h1 class="h1" data-title>The Calm Edge</h1>
     <p class="hero__sub">Do your best work in a noisy world. A field guide to attention, deep work and finishing what matters.</p>
     <div class="links links--center">
       <a class="link" href="#book">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
-      <a class="link" href="#buy">Buy — ₹399 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+      <a class="link" href="#buy">Buy — <span data-price>₹399</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
     </div>
 
     <div class="hero__visual">
@@ -457,7 +500,7 @@ section{position:relative}
 <!-- ================= LOCAL NAV ================= -->
 <nav class="local-nav" aria-label="The Calm Edge">
   <div class="local-nav__inner">
-    <span class="local-nav__title">The Calm Edge</span>
+    <span class="local-nav__title" data-title>The Calm Edge</span>
     <div class="local-nav__links">
       <a href="#book" class="is-active">Overview</a>
       <a href="#highlights">Highlights</a>
@@ -474,7 +517,7 @@ section{position:relative}
     <h2 class="h2">Not another book about productivity.</h2>
     <p class="body-lg">A system you can actually run — built for people who work inside notifications, open offices and always-on group chats.</p>
     <div class="links links--center">
-      <a class="link" href="#buy">Buy — ₹399 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+      <a class="link" href="#buy">Buy — <span data-price>₹399</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
       <a class="link" href="classic.html">Read a free chapter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
     </div>
 
@@ -586,7 +629,7 @@ section{position:relative}
           </div>
           <h3>The Calm Edge</h3>
           <p>Devika Mehta · Self-Help</p>
-          <div class="card__price">₹399 <s>₹699</s></div>
+          <div class="card__price"><span data-price>₹399</span> <s data-mrp>₹699</s></div>
           <a class="btn btn--sm" href="store.html">Buy</a>
         </article>
 
@@ -724,7 +767,7 @@ section{position:relative}
       <p class="eyebrow">Buy The Calm Edge</p>
       <h2 class="h2" style="margin-top:8px">Yours for life.</h2>
       <div class="buy-band__price">
-        <b>₹399</b><s>₹699</s><span>Save 43%</span>
+        <b data-price>₹399</b><s data-mrp>₹699</s><span data-save>Save 43%</span>
       </div>
       <p class="muted" >One payment. Every future edition free.</p>
 
@@ -736,7 +779,7 @@ section{position:relative}
       </ul>
 
       <div class="buy-actions">
-        <a class="btn" href="store.html">Buy now</a>
+        <a class="btn" href="store.html" data-buy>Buy now</a>
         <a class="btn btn--ghost" href="classic.html">Read a free chapter</a>
       </div>
       <p class="buy-note">UPI, cards and netbanking · Instant download · GST invoice available</p>
@@ -903,6 +946,23 @@ section{position:relative}
       a.classList.add("is-active");
     });
   });
+})();
+</script>
+
+<script>
+/* SITE config ko page par lagata hai.
+   Agar JavaScript na chale to HTML ka hardcoded text hi dikhega — kuch nahi tootega. */
+(function () {
+  var S = window.SITE || {};
+  function all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+  if (S.title) all("[data-title]").forEach(function (el) { el.textContent = S.title; });
+  if (S.price) all("[data-price]").forEach(function (el) { el.textContent = (S.currency || "₹") + S.price; });
+  if (S.mrp) all("[data-mrp]").forEach(function (el) { el.textContent = (S.currency || "₹") + S.mrp; });
+  if (S.price && S.mrp) {
+    var save = Math.round((1 - S.price / S.mrp) * 100);
+    all("[data-save]").forEach(function (el) { el.textContent = "Save " + save + "%"; });
+  }
+  if (S.paymentLink) all("[data-buy]").forEach(function (el) { el.setAttribute("href", S.paymentLink); });
 })();
 </script>
 </body>
