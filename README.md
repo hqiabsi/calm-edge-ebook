@@ -122,6 +122,85 @@ Ek ready-to-publish ebook website. Landing page single file hai; store page Tail
 
 ---
 
+## 0c. Apni book daalna, PDF jodna, payment lena, Google par aana
+
+### 1. Book ki details badalna (2 minute)
+
+`index.html` kholo — sabse upar ek block hai jo aise shuru hota hai:
+
+```js
+window.SITE = {
+  title:  "The Calm Edge",
+  author: "Devika Mehta",
+  price:  399,
+  mrp:    699,
+  currency: "₹",
+  paymentLink: "",
+  pdfLink: "",
+  whatsapp: ""
+};
+```
+
+Bas `title`, `author`, `price`, `mrp` badal do — hero ka naam, buy section ka daam aur "Save 43%"
+sab khud update ho jayega. (`<title>` tag aur JSON-LD head mein alag hain — wo bhi badalne ho to
+bata dena.)
+
+**Store page ki books:** `store.html` mein `const BOOKS = [...]` array hai — wahan 13 books hain.
+Detail section 0b mein hai.
+
+### 2. PDF kaise daalein — 3 tarike (honest trade-off)
+
+| Tarika | Kaise | Faayda | Khatra |
+|---|---|---|---|
+| **Public GitHub repo** | PDF repo mein upload karo | free, turant | **Koi bhi bina paise ke download kar sakta hai.** Paid book ke liye mat karo. |
+| **Google Drive** | Drive → upload → Share → "Anyone with the link" → Viewer → link copy | free, 2 minute | Link aage share ho sakta hai; Drive file kabhi delete/block bhi ho sakti hai |
+| **Gumroad / Instamojo / Razorpay** | File unke dashboard par upload karo | Payment + delivery + receipt sab automatic, link leak nahi hota | 5–10% commission |
+
+Paid book ke liye **Gumroad ya Instamojo/Razorpay** hi theek hai. Free sample chapter ke liye Google
+Drive chalega.
+
+**PDF ko site se jodna:** `download.html` ke top par:
+
+```js
+window.SITE = { pdfLink: "https://drive.google.com/file/d/XXXX/view", title: "The Calm Edge", author: "Devika Mehta" };
+```
+
+Uske baad buyer `download.html` par aayega aur "Download PDF" button seedha file kholega. Jab tak
+link nahi daala, page ek saaf note dikhata hai — kuch toota hua nahi lagta.
+
+### 3. Payment lena (Razorpay — India ke liye sabse aasan)
+
+1. `https://razorpay.com` par business account + KYC (PAN, bank details) — 1–2 din
+2. Dashboard → **Payment Links** → **Create**: amount `399`, description, "customer details" on
+3. **Success / redirect URL** mein daalo: `https://hqiabsi.github.io/calm-edge-ebook/download.html`
+4. Link copy karo (jaise `https://rzp.io/l/xxxxx`)
+5. `index.html` ke SITE block mein `paymentLink: "https://rzp.io/l/xxxxx"` — saare "Buy" buttons
+   khud usi link par jaane lagenge
+6. Store ke checkout ke liye wahi link `store.html` ke top par bhi daalo:
+   `window.SITE = { paymentLink: "https://rzp.io/l/xxxxx" };`
+
+**Gumroad alternative:** `gumroad.com` → New product → PDF upload → price → publish → link copy.
+
+### 4. Google par laana
+
+**Jo ho chuka hai:** `robots.txt`, `sitemap.xml` (teeno pages), `canonical` tag, structured data
+(JSON-LD `Book` + `Offer` — isse Google ko pata chalta hai ye ek paid ebook hai), title aur
+description.
+
+**Bacha hua ek hi step hai, aur wo aapke Google account se karna hoga:**
+
+1. Chrome mein `https://search.google.com/search-console` → Gmail se login
+2. **Add property** → **URL prefix** → `https://hqiabsi.github.io/calm-edge-ebook/`
+3. Verification method: **HTML file** → Google jo file dega use **download** kar lo
+4. Wo file **yahin chat mein attach kar do** — main repo mein daal dunga
+5. Wapas Search Console mein **Verify** → phir **Sitemaps** → `sitemap.xml` → **Submit**
+6. URL Inspection → apna URL → **Request Indexing**
+
+Timeline: naya site 3 din se 3 hafte mein index hota hai. `site:hqiabsi.github.io` search karke
+check kar sakte ho.
+
+---
+
 ## 1. Folder mein kya hai
 
 | File | Kaam |
