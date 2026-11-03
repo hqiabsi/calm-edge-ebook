@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free library — official study material | Kitably</title>
-<meta name="description" content="Free, legally downloadable study material — NCERT textbooks, ePathshala and DIKSHA, straight from the official Government of India sources.">
+<title>Free library — 27 verified public-domain books | Kitably</title>
+<meta name="description" content="A free library of public-domain books in Hindi and English — Premchand, Kabir, Tulsidas, Austen, Dickens, Tolstoy and more. Direct PDF and EPUB downloads.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Free library — Kitably">
-<meta property="og:description" content="Free study material, linked from the official sources.">
+<meta property="og:description" content="Public-domain books in Hindi and English. Direct PDF and EPUB downloads.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hqiabsi.github.io/calm-edge-ebook/library.html">
 <link rel="canonical" href="https://hqiabsi.github.io/calm-edge-ebook/library.html">
@@ -15,19 +15,20 @@
 <style>
 :root{
   --ink:#1d1d1f;--ink-2:#6e6e73;--ink-3:#86868b;--line:#d2d2d7;--grey:#f5f5f7;--grey-2:#fbfbfd;
-  --blue:#0071e3;--blue-hover:#0077ed;--green:#1d9a4b;--max:1024px;--max-wide:1440px;--pad:clamp(20px,5vw,40px);
+  --blue:#0071e3;--blue-hover:#0077ed;--green:#1d9a4b;--gold:#b8860b;
+  --max:1024px;--max-wide:1440px;--pad:clamp(20px,5vw,40px);
   --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--font);background:#fff;color:var(--ink);font-size:17px;line-height:1.47059;letter-spacing:-.022em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-img,svg{display:block;max-width:100%}
+svg{display:block;max-width:100%}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 .wrap--wide{max-width:var(--max-wide)}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:100;height:48px;background:rgba(251,251,253,.82);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{position:sticky;top:0;z-index:100;height:48px;background:rgba(251,251,253,.85);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
 .nav__inner{max-width:var(--max-wide);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;gap:26px}
 .nav__logo{display:flex;align-items:center;gap:7px;font-size:15px;font-weight:600}
 .nav__logo svg{width:17px;height:17px}
@@ -35,52 +36,62 @@ img,svg{display:block;max-width:100%}
 .nav__links a{font-size:12px;color:rgba(0,0,0,.8);transition:color .2s}
 .nav__links a:hover,.nav__links a.is-active{color:#000}
 .nav__links a.is-active{font-weight:600}
-@media(max-width:834px){.nav__links{display:none}}
-
-/* type */
-.h1{font-size:clamp(40px,6.4vw,76px);line-height:1.05;font-weight:600;letter-spacing:-.028em}
-.h2{font-size:clamp(28px,3.6vw,44px);line-height:1.1;font-weight:600;letter-spacing:-.024em}
-.sub{font-size:clamp(17px,2vw,23px);line-height:1.32;color:var(--ink-2);letter-spacing:-.016em}
-.eyebrow{font-size:14px;font-weight:600;color:#bf4800}
-.muted{color:var(--ink-2)}
+@media(max-width:834px){.nav__links a:not(.is-active){display:none}}
 
 /* hero */
-.hero{padding:clamp(48px,7vw,88px) 0 clamp(30px,4vw,48px);text-align:center;background:var(--grey-2)}
-.hero .sub{max-width:640px;margin:16px auto 0}
-.notice{
-  max-width:760px;margin:26px auto 0;text-align:left;background:#fff;border:1px solid var(--line);
-  border-radius:16px;padding:16px 18px;font-size:14px;line-height:1.55;color:var(--ink-2);
-}
-.notice b{color:var(--ink)}
+.hero{background:var(--grey-2);padding:clamp(38px,6vw,72px) 0 clamp(26px,3vw,38px);text-align:center;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.05;font-weight:600;letter-spacing:-.028em}
+.hero p{margin:14px auto 0;max-width:600px;font-size:clamp(16px,1.9vw,20px);color:var(--ink-2);line-height:1.4}
+.eyebrow{font-size:13px;font-weight:600;color:var(--gold);margin-bottom:10px}
+
+/* search + chips */
+.tools{position:sticky;top:48px;z-index:90;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding:14px 0}
+.tools__inner{max-width:var(--max-wide);margin:0 auto;padding:0 var(--pad);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.search{position:relative;flex:1 1 280px;max-width:420px;min-width:0}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--ink-3)}
+.search input{width:100%;padding:11px 14px 11px 40px;border-radius:999px;border:1px solid var(--line);background:#fff;font:inherit;font-size:15px;color:var(--ink)}
+.search input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,113,227,.15)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:500;color:var(--ink-2);white-space:nowrap;background:#fff;cursor:pointer;transition:.18s}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip.is-active{background:var(--ink);border-color:var(--ink);color:#fff}
+.count{font-size:12.5px;color:var(--ink-3);margin-left:auto;white-space:nowrap}
 
 /* grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:clamp(34px,5vw,56px) 0}
-.item{
-  border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;
-  background:#fff;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s;
-}
-.item:hover{transform:translateY(-3px);box-shadow:0 20px 44px -28px rgba(0,0,0,.35);border-color:#c9c9cf}
-.item__top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.item__icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(0,113,227,.1);color:var(--blue);flex:none}
-.item__icon svg{width:20px;height:20px}
-.item__tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
-.item h3{font-size:19px;font-weight:600;letter-spacing:-.018em;line-height:1.25;margin-bottom:6px}
-.item p{font-size:14.5px;color:var(--ink-2);line-height:1.5;margin-bottom:16px}
-.item__foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.link{color:var(--blue);font-size:15px;display:inline-flex;align-items:center;gap:5px}
-.link:hover{text-decoration:underline}
-.link svg{width:10px;height:10px}
-.pill{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(29,154,75,.12);color:var(--green)}
-.pill--paid{background:rgba(191,72,0,.1);color:#bf4800}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:22px 18px;padding:clamp(26px,4vw,44px) 0}
+.card{display:flex;flex-direction:column;min-width:0}
+.card.hide{display:none}
+.cover{position:relative;aspect-ratio:3/4;border-radius:4px 10px 10px 4px;overflow:hidden;background-image:linear-gradient(150deg,var(--c1),var(--c2));border:1px solid rgba(0,0,0,.12);box-shadow:0 18px 34px -22px rgba(0,0,0,.55);display:flex;flex-direction:column;padding:14px 12px;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.card:hover .cover{transform:translateY(-4px)}
+.cover__edge{position:absolute;top:0;right:0;bottom:0;width:6px;background-image:linear-gradient(90deg,#f2e8d5,#c6b89c);opacity:.9}
+.cover::after{content:"";position:absolute;left:50%;top:44%;width:44%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;opacity:.2;background:radial-gradient(circle,transparent 52%,var(--acc) 53%,transparent 54.5%,transparent 66%,var(--acc) 67%,transparent 68.5%)}
+.cover__kicker{position:relative;z-index:1;font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.cover__title{position:relative;z-index:1;margin-top:auto;font-size:15px;line-height:1.2;font-weight:600;color:#f8f4ea;letter-spacing:-.01em}
+.cover__author{position:relative;z-index:1;margin-top:8px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.card__title{margin-top:12px;font-size:14.5px;font-weight:600;letter-spacing:-.012em;line-height:1.3;color:var(--ink)}
+.card__meta{margin-top:3px;font-size:12.5px;color:var(--ink-2);line-height:1.35}
+.card__row{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+.dl{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px;border:1px solid var(--line);color:var(--ink);transition:.18s;background:#fff}
+.dl:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dl svg{width:11px;height:11px}
+.dl--none{opacity:.4;pointer-events:none}
+.empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-2);border:1px dashed var(--line);border-radius:18px}
+.empty b{display:block;font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:600}
 
-/* cta */
-.cta{background:#000;color:#f5f5f7;text-align:center;padding:clamp(48px,7vw,84px) 0}
-.cta .sub{color:#a1a1a6;margin:14px auto 0;max-width:560px}
-.btn{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#fff;border-radius:980px;padding:13px 26px;font-size:17px;margin-top:26px;transition:background .2s}
-.btn:hover{background:var(--blue-hover)}
+/* collections */
+.collections{background:var(--grey);padding:clamp(38px,5vw,64px) 0}
+.collections h2{font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.collections p.sub{color:var(--ink-2);font-size:15.5px;margin-bottom:24px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.citem{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;transition:.2s}
+.citem:hover{transform:translateY(-2px);box-shadow:0 16px 34px -24px rgba(0,0,0,.4)}
+.citem b{display:block;font-size:15.5px;font-weight:600;margin-bottom:4px}
+.citem span{font-size:13px;color:var(--ink-2);line-height:1.45;display:block}
+.citem i{display:inline-block;margin-top:10px;font-style:normal;font-size:12px;font-weight:600;color:var(--blue)}
 
 /* footer */
-footer{border-top:1px solid var(--line);background:var(--grey);font-size:12px;color:var(--ink-2);padding:22px 0}
+footer{border-top:1px solid var(--line);background:#fff;font-size:12px;color:var(--ink-2);padding:22px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
 footer a{color:var(--blue)}
 footer a:hover{text-decoration:underline}
@@ -103,117 +114,156 @@ footer a:hover{text-decoration:underline}
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Free · no login · no payment</p>
-      <h1 class="h1">Free library</h1>
-      <p class="sub">Every file here is free and comes straight from its official source. We link to it — we don't re-host someone else's copyrighted book.</p>
-      <div class="notice">
-        <b>Note on copyright:</b> NCERT textbooks are copyrighted. NCERT allows them to be downloaded for personal study but does not permit any other website to host them, so the buttons below open the official Government of India pages. Files that are our own work are marked <b>Our file</b>.
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap wrap--wide">
-    <div class="grid" id="grid"><!-- cards yahan JS se aate hain --></div>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Free · legal · direct download</p>
+    <h1>Free library</h1>
+    <p>Public-domain books in Hindi and English — Premchand, Kabir, Tulsidas, Austen, Dickens, Tolstoy. Every file is free to download and yours to keep.</p>
   </div>
+</section>
 
-  <section class="cta">
-    <div class="wrap">
-      <h2 class="h2">Want the paid study guide?</h2>
-      <p class="sub">Original one-liner notes, chapter-wise, in Hindi — written by us, delivered instantly.</p>
-      <a class="btn" href="index.html#buy">See the book</a>
+<div class="tools">
+  <div class="tools__inner">
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+      <input type="search" id="q" placeholder="Search title or author…" autocomplete="off" aria-label="Search books">
+    </label>
+    <div class="chips" id="chips">
+      <button class="chip is-active" data-f="all">All</button>
+      <button class="chip" data-f="hi">हिन्दी</button>
+      <button class="chip" data-f="en">English</button>
+      <button class="chip" data-f="उपन्यास">उपन्यास</button>
+      <button class="chip" data-f="कविता">कविता</button>
+      <button class="chip" data-f="Novel">Novel</button>
+      <button class="chip" data-f="Philosophy">Philosophy</button>
     </div>
-  </section>
-</main>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<div class="wrap wrap--wide">
+  <div class="grid" id="grid"></div>
+</div>
+
+<section class="collections">
+  <div class="wrap wrap--wide">
+    <h2>Browse the big collections</h2>
+    <p class="sub">Lakhs of books, free and legal — these are the official sources our shelf links to.</p>
+    <div class="cgrid">
+      <a class="citem" href="https://www.gutenberg.org/" target="_blank" rel="noopener">
+        <b>Project Gutenberg</b><span>79,000+ public-domain ebooks, EPUB and Kindle formats.</span><i>gutenberg.org →</i>
+      </a>
+      <a class="citem" href="https://archive.org/details/booksbylanguage_hindi" target="_blank" rel="noopener">
+        <b>Internet Archive — Hindi</b><span>Scanned Hindi books, many marked public domain, PDF downloads.</span><i>archive.org →</i>
+      </a>
+      <a class="citem" href="https://hi.wikisource.org/" target="_blank" rel="noopener">
+        <b>विकिस्रोत (Hindi Wikisource)</b><span>Proofread Hindi texts — Premchand, Prasad, Nirala and more.</span><i>hi.wikisource.org →</i>
+      </a>
+      <a class="citem" href="https://www.doabooks.org/" target="_blank" rel="noopener">
+        <b>DOAB</b><span>1,08,000+ peer-reviewed open-access academic books.</span><i>doabooks.org →</i>
+      </a>
+      <a class="citem" href="https://openstax.org/" target="_blank" rel="noopener">
+        <b>OpenStax</b><span>Free, peer-reviewed college textbooks — download and keep.</span><i>openstax.org →</i>
+      </a>
+      <a class="citem" href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">
+        <b>NCERT textbooks</b><span>Class I–XII, Hindi and English, from the official site.</span><i>ncert.nic.in →</i>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year">2026</span> Kitably. All rights reserved.</span>
+    <span>© <span id="year">2026</span> Kitably. Free library is public-domain only.</span>
     <span><a href="index.html">Home</a> · <a href="store.html">Store</a> · <a href="index.html#support">Support</a></span>
   </div>
 </footer>
 
 <script>
 /* ============================================================
-   📚 LIBRARY ITEMS — naya card add karna ho to yahan copy karo
-   ------------------------------------------------------------
-   url  → bahar ka official link (host nahi karte)
-   file → apni file jo repo mein rakhi hai (jaise "files/notes.pdf")
-   paid → true karne par "Paid" pill dikhega aur link index.html#buy jayega
+   📚 CATALOG
+   Har book public domain hai — download link seedha file par jaata hai.
+   Naya book add karna ho to isi array mein ek object daal do.
    ============================================================ */
-var LIBRARY = [
-  {
-    tag: "Official · Govt of India",
-    title: "NCERT textbooks — Class I to XII",
-    desc: "All subjects, Hindi / English / Urdu, chapter-wise or full book. The only authorised source.",
-    url: "https://ncert.nic.in/textbook.php",
-    paid: false,
-    icon: "book"
-  },
-  {
-    tag: "Official · NCERT app",
-    title: "ePathshala",
-    desc: "NCERT's own reading app — textbooks, audio-visual content and supplements, mobile friendly.",
-    url: "https://epathshala.nic.in/",
-    paid: false,
-    icon: "phone"
-  },
-  {
-    tag: "Official · Govt of India",
-    title: "DIKSHA portal",
-    desc: "Textbooks plus QR-linked videos and practice material, built under NEP 2020.",
-    url: "https://diksha.gov.in/",
-    paid: false,
-    icon: "play"
-  },
-  {
-    tag: "Official",
-    title: "NCERT — Geography (Class XI–XII)",
-    desc: "Fundamentals of Physical Geography, India Physical Environment, Human Geography, People and Economy.",
-    url: "https://ncert.nic.in/textbook.php",
-    paid: false,
-    icon: "globe"
-  }
+var BOOKS = [{"t":"गोदान (Godan)","kw":"premchand godan hindi upanyas novel","a":"प्रेमचंद","lang":"hi","cat":"उपन्यास","year":"1936","src":"archive","id":"godan_premchand","pdf":"Godan - Premchand.pdf","epub":"Godan - Premchand.epub"},{"t":"कर्मभूमि (Karmabhumi)","kw":"premchand karmabhumi karmabhoomi hindi novel","a":"प्रेमचंद","lang":"hi","cat":"उपन्यास","year":"1932","src":"archive","id":"premchand-karmabhumi","pdf":"Premchand - Karmabhumi1.1.pdf","epub":"Premchand - Karmabhumi1.1.epub"},{"t":"वरदान (Vardan)","kw":"premchand vardan hindi novel","a":"प्रेमचंद","lang":"hi","cat":"उपन्यास","year":"1925","src":"archive","id":"premchand-vardan","pdf":"Premchand - Vardan1.1.pdf","epub":"Premchand - Vardan1.1.epub"},{"t":"सेवासदन (Sevasadan)","kw":"premchand sevasadan seva sadan hindi novel","a":"प्रेमचंद","lang":"hi","cat":"उपन्यास","year":"1919","src":"archive","id":"premchand-sevasadan","pdf":"Premchand - Sevasadan1.1.pdf","epub":"Premchand - Sevasadan1.1.epub"},{"t":"Stories by Premchand","kw":"premchand kahani stories hindi","a":"Premchand","lang":"hi","cat":"कहानी","year":"","src":"archive","id":"StoriesByPremchand","pdf":"StoriesByPremchand.pdf","epub":"StoriesByPremchand.epub"},{"t":"Bijak — Kabir Saheb (Hindi tika)","kw":"kabir bijak doha sakhi hindi poetry bhakti","a":"Kabir","lang":"hi","cat":"कविता","year":"","src":"archive","id":"Bijak.Kabir.Saheb.with.Hindi.Tika","pdf":"Bijak.Kabir.Saheb.with.Hindi.Tika.pdf","epub":null},{"t":"Vinaya Patrika","kw":"tulsidas vinay patrika hindi bhakti poetry ram","a":"Goswami Tulsidas","lang":"hi","cat":"कविता","year":"","src":"archive","id":"Vinaya.Patrika.by.Goswami.Tulsidas.with.Bhavar","pdf":"Vinaya.Patrika.by.Goswami.Tulsidas.with.Bhavar.pdf","epub":null},{"t":"Pride and Prejudice","a":"Jane Austen","lang":"en","cat":"Novel","year":"1813","src":"gutenberg","id":1342,"pdf":null,"epub":null},{"t":"Frankenstein","a":"Mary Shelley","lang":"en","cat":"Novel","year":"1818","src":"gutenberg","id":84,"pdf":null,"epub":null},{"t":"Alice's Adventures in Wonderland","a":"Lewis Carroll","lang":"en","cat":"Children","year":"1865","src":"gutenberg","id":11,"pdf":null,"epub":null},{"t":"The Adventures of Sherlock Holmes","a":"Arthur Conan Doyle","lang":"en","cat":"Stories","year":"1892","src":"gutenberg","id":1661,"pdf":null,"epub":null},{"t":"Moby Dick","a":"Herman Melville","lang":"en","cat":"Novel","year":"1851","src":"gutenberg","id":2701,"pdf":null,"epub":null},{"t":"A Tale of Two Cities","a":"Charles Dickens","lang":"en","cat":"Novel","year":"1859","src":"gutenberg","id":98,"pdf":null,"epub":null},{"t":"Great Expectations","a":"Charles Dickens","lang":"en","cat":"Novel","year":"1861","src":"gutenberg","id":1400,"pdf":null,"epub":null},{"t":"The Picture of Dorian Gray","a":"Oscar Wilde","lang":"en","cat":"Novel","year":"1890","src":"gutenberg","id":174,"pdf":null,"epub":null},{"t":"Dracula","a":"Bram Stoker","lang":"en","cat":"Novel","year":"1897","src":"gutenberg","id":345,"pdf":null,"epub":null},{"t":"Metamorphosis","a":"Franz Kafka","lang":"en","cat":"Stories","year":"1915","src":"gutenberg","id":5200,"pdf":null,"epub":null},{"t":"The Prince","a":"Niccolò Machiavelli","lang":"en","cat":"Philosophy","year":"1532","src":"gutenberg","id":1232,"pdf":null,"epub":null},{"t":"The Republic","a":"Plato","lang":"en","cat":"Philosophy","year":"-375","src":"gutenberg","id":1497,"pdf":null,"epub":null},{"t":"War and Peace","a":"Leo Tolstoy","lang":"en","cat":"Novel","year":"1869","src":"gutenberg","id":2600,"pdf":null,"epub":null},{"t":"A Doll's House","a":"Henrik Ibsen","lang":"en","cat":"Drama","year":"1879","src":"gutenberg","id":2542,"pdf":null,"epub":null},{"t":"The Great Gatsby","a":"F. Scott Fitzgerald","lang":"en","cat":"Novel","year":"1925","src":"gutenberg","id":64317,"pdf":null,"epub":null},{"t":"The Yellow Wallpaper","a":"Charlotte Perkins Gilman","lang":"en","cat":"Stories","year":"1892","src":"gutenberg","id":1952,"pdf":null,"epub":null},{"t":"A Modest Proposal","a":"Jonathan Swift","lang":"en","cat":"Essay","year":"1729","src":"gutenberg","id":1080,"pdf":null,"epub":null},{"t":"Walden","a":"Henry David Thoreau","lang":"en","cat":"Essay","year":"1854","src":"gutenberg","id":205,"pdf":null,"epub":null},{"t":"The Importance of Being Earnest","a":"Oscar Wilde","lang":"en","cat":"Drama","year":"1895","src":"gutenberg","id":844,"pdf":null,"epub":null},{"t":"Wuthering Heights","a":"Emily Brontë","lang":"en","cat":"Novel","year":"1847","src":"gutenberg","id":768,"pdf":null,"epub":null}];
+
+var PALETTE = [
+  ["#1d2d3c","#0b131b","#e8c583"], ["#3b2f2a","#1a1310","#e8c583"],
+  ["#1f3b35","#0e1b18","#8fd0bd"], ["#3a2430","#1b1116","#e5a8a0"],
+  ["#243a52","#0f1a26","#9dc0e0"], ["#3a3222","#1c170f","#e0c78f"],
+  ["#2b2f42","#14161f","#b8bfe0"], ["#2e3324","#14170f","#c3d08a"]
 ];
 
-var ICONS = {
-  book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/>',
-  phone: '<rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/>',
-  play: '<circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/>',
-  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/>',
-  file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/>'
-};
+function hash(s){ var h=0; for (var i=0;i<s.length;i++){ h=(h*31+s.charCodeAt(i))|0; } return Math.abs(h); }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
-(function () {
+function dlLinks(b){
+  var out = [];
+  if (b.src === "archive"){
+    if (b.pdf)  out.push('<a class="dl" href="https://archive.org/download/'+encodeURIComponent(b.id)+'/'+encodeURIComponent(b.pdf)+'" target="_blank" rel="noopener">PDF</a>');
+    if (b.epub) out.push('<a class="dl" href="https://archive.org/download/'+encodeURIComponent(b.id)+'/'+encodeURIComponent(b.epub)+'" target="_blank" rel="noopener">EPUB</a>');
+    out.push('<a class="dl" href="https://archive.org/details/'+encodeURIComponent(b.id)+'" target="_blank" rel="noopener">Details</a>');
+  } else {
+    out.push('<a class="dl" href="https://www.gutenberg.org/ebooks/'+b.id+'.epub.noimages" target="_blank" rel="noopener">EPUB</a>');
+    out.push('<a class="dl" href="https://www.gutenberg.org/ebooks/'+b.id+'" target="_blank" rel="noopener">All formats</a>');
+  }
+  return out.join("");
+}
+
+function card(b){
+  var p = PALETTE[hash(b.t) % PALETTE.length];
+  return '<article class="card" data-lang="'+b.lang+'" data-cat="'+esc(b.cat)+'" data-q="'+esc((b.t+" "+b.a+" "+b.cat+" "+b.year+" "+(b.kw||"")).toLowerCase())+'">'
+    + '<div class="cover" style="--c1:'+p[0]+';--c2:'+p[1]+';--acc:'+p[2]+'">'
+    +   '<span class="cover__edge"></span>'
+    +   '<span class="cover__kicker">'+(b.lang==="hi"?"हिन्दी":"eBook")+'</span>'
+    +   '<span class="cover__title">'+esc(b.t)+'</span>'
+    +   '<span class="cover__author">'+esc(b.a)+'</span>'
+    + '</div>'
+    + '<h3 class="card__title">'+esc(b.t)+'</h3>'
+    + '<p class="card__meta">'+esc(b.a)+(b.year?' · '+esc(b.year):'')+' · '+esc(b.cat)+'</p>'
+    + '<div class="card__row">'+dlLinks(b)+'</div>'
+    + '</article>';
+}
+
+(function(){
   var grid = document.getElementById("grid");
+  var q = document.getElementById("q");
+  var chips = document.getElementById("chips");
+  var countEl = document.getElementById("count");
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  grid.innerHTML = LIBRARY.map(function (b) {
-    var href = b.file ? b.file : b.url;
-    var isOwn = !!b.file;
-    var label = b.paid ? "Buy" : (isOwn ? "Download free" : "Open official site");
-    var target = b.paid ? "index.html#buy" : href;
-    var ext = (!b.paid && !isOwn) ? ' target="_blank" rel="noopener"' : (isOwn ? ' download' : "");
-    var pill = b.paid
-      ? '<span class="pill pill--paid">Paid</span>'
-      : (isOwn ? '<span class="pill">Our file · Free</span>' : '<span class="pill">Free</span>');
-    return '' +
-      '<article class="item">' +
-        '<div class="item__top">' +
-          '<span class="item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (ICONS[b.icon] || ICONS.file) + '</svg></span>' +
-          '<span class="item__tag">' + b.tag + '</span>' +
-        '</div>' +
-        '<h3>' + b.title + '</h3>' +
-        '<p>' + b.desc + '</p>' +
-        '<div class="item__foot">' +
-          '<a class="link" href="' + target + '"' + ext + '>' + label +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>' +
-          '</a>' + pill +
-        '</div>' +
-      '</article>';
-  }).join("");
+  grid.innerHTML = BOOKS.map(card).join("") +
+    '<div class="empty" id="empty" hidden><b>Kuch nahi mila</b>Doosra shabd try karo, ya filter hata do.</div>';
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+  var empty = document.getElementById("empty");
+  var filter = "all";
+
+  function apply(){
+    var term = (q.value || "").trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var okF = filter === "all" || c.dataset.lang === filter || c.dataset.cat === filter;
+      var okQ = !term || c.dataset.q.indexOf(term) > -1;
+      var show = okF && okQ;
+      c.classList.toggle("hide", !show);
+      if (show) shown++;
+    });
+    empty.hidden = shown !== 0;
+    countEl.textContent = shown + " / " + BOOKS.length + " books";
+  }
+
+  q.addEventListener("input", apply);
+  chips.addEventListener("click", function(e){
+    var b = e.target.closest(".chip");
+    if (!b) return;
+    Array.prototype.forEach.call(chips.querySelectorAll(".chip"), function(x){ x.classList.remove("is-active"); });
+    b.classList.add("is-active");
+    filter = b.dataset.f;
+    apply();
+  });
+
+  apply();
 })();
 </script>
 </body>
