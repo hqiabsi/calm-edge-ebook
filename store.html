@@ -10,6 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+/* ⚙️ Payment link yahan daalo — store ka checkout isse use karta hai */
+window.SITE = { paymentLink: "", pdfLink: "", whatsapp: "" };
+</script>
 <link rel="stylesheet" href="store.css">
 </head>
 <body class="min-h-screen">
@@ -970,7 +974,9 @@
   // checkout + login + newsletter
   $("#checkoutBtn").addEventListener("click", () => {
     if (!state.cart.length) return toast("Your cart is empty");
-    toast("Demo store — Razorpay/Gumroad link jodna baaki hai");
+    const S = window.SITE || {};
+    if (S.paymentLink) { window.location.href = S.paymentLink; return; }
+    toast("Payment link add karna baaki hai — README section 0c dekho");
   });
   $("#loginBtn").addEventListener("click", () => toast("Login demo hai — account system baad me jodna hai"));
   $("#wishBtn").addEventListener("click", () => {
